@@ -61,6 +61,12 @@ nav :
     <script src="/jquery/2.2.1/jquery.min.js"></script>
     <script src="/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/d3/3.5.16/d3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
     <style>
       {% for selector in page.nav.css %}
         {{ selector[0] }} {
@@ -83,12 +89,6 @@ nav :
         });
       });
     </script>
-
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
