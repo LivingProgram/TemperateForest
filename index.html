@@ -48,6 +48,16 @@ nav :
     .navbar-default div.navbar-collapse : 
       border-top: none
       box-shadow: none
+carousel : 		
+  css :		
+    .carousel-inner > .item :
+      background-size: cover !important
+      background-position: 50% !important
+      height: 90vh
+    .carousel-control.left :		
+      background-image: linear-gradient(to right,rgb(255, 255, 255) 0,rgba(0, 0, 0, 0.0001) 100%)		
+    .carousel-control.right :		
+      background-image: linear-gradient(to left,rgb(255, 255, 255) 0,rgba(0, 0, 0, 0.001) 100%)
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -68,6 +78,13 @@ nav :
            {{ css[0] }} : {{ css[1] }}; 
          {% endfor %}
         }
+      {% endfor %}
+      {% for selector in page.carousel.css %}		
+         {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+         }		
       {% endfor %}
     </style>
     <script>
