@@ -89,6 +89,12 @@ carousel :
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
+    {% for line in page.link %}
+    <link {% for item in line %}{{ item[0] }}="{{ item[1] }}" {% endfor %}>
+    {% endfor %}
+    {% for line in page.script %}
+    <script {% for item in line %}{{ item[0] }}="{{ item[1] }}" {% endfor %}></script>
+    {% endfor %}
     <style>
       {% for selector in page.nav.css %}
         {{ selector[0] }} {
