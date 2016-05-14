@@ -1,1 +1,56 @@
+---
+title : TemperateForest North American Porcupine
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include explanations.css %}
+      {% include animals_nav.css %}
+      {% include footer.css %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
 
+    {% include nav.html %}
+
+    <div style="background: url(/TemperateForest/images/animals/north_american_porcupine2.jpg) no-repeat center;height: 100vh;background-size: cover;background-position-y: 3%;">
+      <h2 style="
+        margin-top: 0;
+        padding-top: 40vh;
+        color: white;
+        font-size: 92px;
+        font-weight: 800;
+        padding-left: 5vw;
+        ">North American Porcupine</h2>
+    </div>
+
+    <div class="container explanations">
+      {% for line in site.data.profiles.north_american_porcupine.content %}	
+        {% for item in line %}
+        <h1>{{ item[0] }}</h1>
+        <p>{{ item[1] }}</p>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <img src="/TemperateForest/images/ProfilePics/north_american_porcupine.JPG" style="width: 100vw;">
+
+    {% include footer.html %}
+
+  </body>
+</html>
