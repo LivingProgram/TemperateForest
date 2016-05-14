@@ -1,51 +1,5 @@
 ---
 title : TemperateForest Animals
-nav : 
-  list : 
-    - link : https://livingprogram.github.io/TemperateForest/
-      name : Home
-    - link : https://livingprogram.github.io/TemperateForest/animals.html
-      name : Animals
-    - link : http://livingprogram.github.io/TemperateForest/contact.html
-      name : Contact
-  css : 
-    '#nav' :
-      min-height: 79px
-      background: none
-      border: 0px
-    '#navbar' :
-      border-color: transparent
-    .navbar-nav : 
-      float: right
-      padding-top: 15px
-      padding-bottom: 15px
-    .navbar-default :
-      border-color: transparent
-    .navbar-default .navbar-nav>li>a.special-hover :
-      color: '#FFFFFF'
-      font-size: 18px
-    .nav > li > a.special-hover:hover :
-      color : '#00FFFD'
-    .nav > li > a.special-hover:before :
-      content: '""'
-      position : absolute
-      width : 100%
-      height: 2px
-      bottom: 0
-      left: 0
-      background-color: '#FFFFFF'
-      visibility: hidden
-      -webkit-transform: scaleX(0)
-      transform: scaleX(0)
-      -webkit-transition: all 0.3s ease-in-out 0s
-      transition: all 0.3s ease-in-out 0s
-    .nav > li > a.special-hover:hover:before :
-      visibility: visible
-      -webkit-transform: scaleX(1)
-      transform: scaleX(1)
-    .navbar-default div.navbar-collapse : 
-      border-top: none
-      box-shadow: none
 imagegrids :
   items :
     header :
@@ -121,48 +75,6 @@ models :
       text-align: center
       color: '#FFFFFF'
       padding-top: 50vh
-footer :
-  items :		
-    left :		
-      - name : Home
-        href : /TemperateForest/
-      - name : Animals
-        href : /TemperateForest/animals.html
-      - name : Contact
-        href : /TemperateForest/contact.html
-    center : 'Page made by LivingProgram. Powered by Github and Jekyll.'
-  css :
-    .footer-color-black :		
-      background-color: rgba(30, 30, 30, 0.97)		
-      color: '#DDDDDD'		
-    .footer nav > ul :		
-      font-size: 16px		
-      list-style: none		
-      margin: 0		
-      padding: 0		
-      font-weight: normal		
-    .footer nav > ul li:first-child :		
-      margin-left: 0		
-    .footer nav > ul li :		
-      margin-left: 20px		
-      float: left		
-    .footer nav > ul a :		
-      padding: 10px 0px		
-      margin: 15px 10px 15px 0px		
-      color: '#777777'		
-      display: block		
-      font-size: 14px		
-      font-family: '"Droid Serif", "Helvetica Neue", "Helvetica","Arial"'		
-    .footer .center-text :		
-      font-size: 14px		
-      font-family: '"Droid Serif", "Helvetica Neue", "Helvetica","Arial"'		
-      color: '#777777'		
-      padding: 10px 15px		
-      margin: 15px 3px		
-      line-height: 20px		
-      text-align: center		
-    .center-text a :		
-      color: '#FFFFFF'
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -173,20 +85,7 @@ footer :
     <title>{{ page.title }}</title>
     {% include resources.css %}
     <style>
-      {% for selector in page.nav.css %}
-        {{ selector[0] }} {
-         {% for css in selector[1] %}
-           {{ css[0] }} : {{ css[1] }}; 
-         {% endfor %}
-        }
-      {% endfor %}
-      {% for selector in page.footer.css %}		
-         {{ selector[0] }} {		
-          {% for css in selector[1] %}		
-            {{ css[0] }} : {{ css[1] }}; 		
-          {% endfor %}		
-         }		
-      {% endfor %}
+      {% include nav.css %}
       {% for selector in page.imagegrids.css %}
         {{ selector[0] }} {		
           {% for css in selector[1] %}		
@@ -201,6 +100,7 @@ footer :
           {% endfor %}		
         }
       {% endfor %}
+      {% include footer.css %}
     </style>
     <script>
       $(document).ready(function(){       
