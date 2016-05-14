@@ -2,7 +2,7 @@
       <div class="container">
         <nav class="pull-left navbar-burger">
           <ul>
-            {% for line in page.footer.items.left %}
+            {% for line in site.data.footer.content.items.left %}
             <li>
               <a target="_blank" href="{{ line.href }}">
                 {{ line.name }}
@@ -12,7 +12,7 @@
           </ul>
         </nav>
         <div class="center-text">
-          {{ page.footer.items.center }}
+          {{ site.data.footer.content.items.center }}
         </div>
       </div>
     </footer>
