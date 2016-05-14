@@ -62,6 +62,22 @@ nav :
     .navbar-default div.navbar-collapse : 
       border-top: none
       box-shadow: none
+contact :
+  items :
+    title : Contact Information
+    text : If you have any questions, concerns, or suggestions regarding this website please contact LivingProgram at kyhan316@gmail.com
+  css :
+    '#section-header > h2' :		
+      text-align: center		
+      margin-bottom: 46px		
+      font-weight: 800 		
+      font-size: 60px 		
+    '#section-header > p' :		
+      text-align: center		
+      margin-bottom: 70px		
+      font-weight: normal		
+      line-height: 38px		
+      font-size: 25px
 footer :
   items :		
     left :		
@@ -154,6 +170,12 @@ footer :
 
     <div style="background: url(/TemperateForest/images/contact-main.jpg) no-repeat center;height: 100vh;background-size: cover;"></div>
 
+    <div class="container">
+      <div id="section-header">
+        <h2>{{ page.models.items.header.title }}</h2>
+        <p>{{ page.models.items.header.text }}</p>
+      </div>
+    </div>
 
     {% include footer.html %}
 
