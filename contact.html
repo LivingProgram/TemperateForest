@@ -143,6 +143,13 @@ footer :
          {% endfor %}
         }
       {% endfor %}
+      {% for selector in page.contact.css %}
+        {{ selector[0] }} {
+         {% for css in selector[1] %}
+           {{ css[0] }} : {{ css[1] }}; 
+         {% endfor %}
+        }
+      {% endfor %}
       {% for selector in page.footer.css %}		
          {{ selector[0] }} {		
           {% for css in selector[1] %}		
