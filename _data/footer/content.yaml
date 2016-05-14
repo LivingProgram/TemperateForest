@@ -1,0 +1,9 @@
+  items :		
+    left :		
+      - name : Home
+        href : /TemperateForest/
+      - name : Animals
+        href : /TemperateForest/animals.html
+      - name : Contact
+        href : /TemperateForest/contact.html
+    center : 'Page made by LivingProgram. Powered by Github and Jekyll.'
