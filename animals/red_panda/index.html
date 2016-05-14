@@ -38,25 +38,11 @@ title : TemperateForest Red Panda
         ">Red Panda</h2>
     </div>
 
-    <div class="container" style="
-      padding-left: 15vw;
-      padding-right: 15vw;
-      padding-top: 40px;
-      ">
+    <div class="container explanations">
       {% for line in site.data.profiles.red_panda.content %}	
         {% for item in line %}
-        <h1 style="
-          font-weight: 800;
-          font-size: 60px;
-          margin-top: 0px;
-          margin-bottom: 22px;
-          line-height: 65px;
-          ">{{ item[0] }}</h1>
-        <p style="
-          font-size: 26px;
-          margin-bottom: 0px;
-          line-height: 33px;
-          ">{{ item[1] }}</p>
+        <h1>{{ item[0] }}</h1>
+        <p>{{ item[1] }}</p>
         {% endfor %}
       {% endfor %}
     </div>
