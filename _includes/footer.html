@@ -1,0 +1,18 @@
+    <footer class="footer footer-color-black">
+      <div class="container">
+        <nav class="pull-left navbar-burger">
+          <ul>
+            {% for line in page.footer.items.left %}
+            <li>
+              <a target="_blank" href="{{ line.href }}">
+                {{ line.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div class="center-text">
+          {{ page.footer.items.center }}
+        </div>
+      </div>
+    </footer>
