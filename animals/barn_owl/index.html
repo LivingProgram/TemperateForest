@@ -1,11 +1,12 @@
 ---
-title : TemperateForest Animals
+title : TemperateForest Barn Owl
 ---
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     {% include resources.html %}
     <style>
+      {% include explanations.css %}
       {% include animals_nav.css %}
       {% include footer.css %}
     </style>
@@ -34,12 +35,22 @@ title : TemperateForest Animals
         color: white;
         font-size: 92px;
         font-weight: 800;
-        padding-left: 10vw;
+        padding-left: 5vw;
         ">Barn Owl</h2>
     </div>
+
+    <div class="container explanations">
+      {% for line in site.data.profiles.barn_owl.content %}	
+        {% for item in line %}
+        <h1>{{ item[0] }}</h1>
+        <p>{{ item[1] }}</p>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <img src="/TemperateForest/images/ProfilePics/barn_owl.JPG" style="width: 100vw;">
 
     {% include footer.html %}
 
   </body>
 </html>
-
