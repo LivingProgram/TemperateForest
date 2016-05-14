@@ -40,8 +40,8 @@ title : TemperateForest Red Panda
 
     <div class="container">
       {% for line in site.data.profiles.red_panda.content %}	
-        <h1>{{ item[0] }}</h1>
-        <p>{{ item[1] }}</p>
+        <h1>{{ line.item[0] }}</h1>
+        <p>{{ line.item[1] }}</p>
       {% endfor %}
     </div>
 
