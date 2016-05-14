@@ -1,0 +1,6 @@
+    {% for line in site.data.resources.content.link %}
+    <link {% for item in line %}{{ item[0] }}="{{ item[1] }}" {% endfor %}>
+    {% endfor %}
+    {% for line in site.data.resources.content.script %}
+    <script {% for item in line %}{{ item[0] }}="{{ item[1] }}" {% endfor %}></script>
+    {% endfor %}
