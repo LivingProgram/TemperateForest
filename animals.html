@@ -124,11 +124,19 @@ imagegrids :
       font-weight: normal		
       line-height: 38px		
       font-size: 25px
-model :
+models :
   items :
     header :
       title : Temperate Forest Models
       text : Explore the extraordinary relationships between animals in the Temperate Forest.
+  css :
+    .modelsPlaceholder :
+      background-color: '#808080'
+      height: 100vh
+    .modelsPlaceholder > h1 :
+      text-align: center
+      color: '#FFFFFF'
+      padding-top: 50vh
 footer :
   items :		
     left :		
@@ -201,6 +209,13 @@ footer :
          }		
       {% endfor %}
       {% for selector in page.imagegrids.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+      {% for selector in page.models.css %}
         {{ selector[0] }} {		
           {% for css in selector[1] %}		
             {{ css[0] }} : {{ css[1] }}; 		
@@ -286,12 +301,12 @@ footer :
 
     <div class="container">
       <div id="section-header">
-        <h2>{{ page.model.items.header.title }}</h2>
-        <p>{{ page.model.items.header.text }}</p>
+        <h2>{{ page.models.items.header.title }}</h2>
+        <p>{{ page.models.items.header.text }}</p>
       </div>
-      <div class="modelPlaceholder"></div>
-      <div class="modelPlaceholder"></div>
-      <div class="modelPlaceholder"></div>
+      <div class="modelsPlaceholder"><h1>Cladogram</h1></div>
+      <div class="modelsPlaceholder"><h1>Food Web</h1></div>
+      <div class="modelsPlaceholder"><h1>Trophic Level</h1></div>
     </div>
 
     {% include footer.html %}
