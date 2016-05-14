@@ -1,1 +1,7 @@
-
+  list : 
+    - link : https://livingprogram.github.io/TemperateForest/
+      name : Home
+    - link : https://livingprogram.github.io/TemperateForest/animals.html
+      name : Animals
+    - link : http://livingprogram.github.io/TemperateForest/contact.html
+      name : Contact
