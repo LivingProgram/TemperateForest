@@ -62,6 +62,7 @@ nav :
     .navbar-default div.navbar-collapse : 
       border-top: none
       box-shadow: none
+
 footer :
   items :		
     left :		
@@ -154,82 +155,43 @@ footer :
 
     <div class="container">
       <div class="row">
-        <a href="{{ page.imagegrids.items.row1.item1.href }}" title="{{ page.imagegrids.items.row1.item1.title }}">
+        {% for line in page.imagegrids.items.row1 %}
+        <a href="{{ line.href }}" title="{{ line.title }}">
           <div class="col-lg-4 col-md-4 col-sm-4 col-sx-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row1.item1.img }}) no-repeat center;background-size: cover;">
+            <div class="item-wrapper" style="background:url({{ line.img }}) no-repeat center;background-size: cover;">
               <div class="item-title">
-                <h2>{{ page.imagegrids.items.row1.item1.title }}</h2>
+                <h2>{{ line.title }}</h2>
               </div>
             </div>
           </div>
         </a>
-        <a href="{{ page.imagegrids.items.row1.item2.href }}" title="{{ page.imagegrids.items.row1.item2.title }}">
-          <div class="col-lg-4 col-md-4 col-sx-4 col-sm-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row1.item2.img }}) no-repeat center; background-size: cover;">
-              <div class="item-title">
-                <h2>{{ page.imagegrids.items.row1.item2.title }}</h2>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="{{ page.imagegrids.items.row1.item3.href }}" title="{{ page.imagegrids.items.row1.item3.title }}">
-          <div class="col-lg-4 col-md-4 col-sx-4 col-sm-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row1.item3.img }}) no-repeat center; background-size: cover;">
-              <div class="item-title">
-                <h2>{{ page.imagegrids.items.row1.item3.title }}</h2>
-              </div>
-            </div>
-          </div>
-        </a>
+        {% endfor %}
       </div>
       <div class="row">
-        <a href="{{ page.imagegrids.items.row2.item1.href }}" title="{{ page.imagegrids.items.row2.item1.title }}">
+        {% for line in page.imagegrids.items.row2 %}
+        <a href="{{ line.href }}" title="{{ line.title }}">
           <div class="col-lg-6 col-md-6 col-sx-6 col-sm-6">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row2.item1.img }}) no-repeat center;background-size: cover;">
+            <div class="item-wrapper" style="background:url({{ line.img }}) no-repeat center;background-size: cover;">
               <div class="item-title">
-                <h2>{{ page.imagegrids.items.row2.item1.title }}</h2>
+                <h2>{{ line.title }}</h2>
               </div>
             </div>
           </div>
         </a>
-        <a href="{{ page.imagegrids.items.row2.item2.href }}" title="{{ page.imagegrids.items.row2.item2.title }}">
-          <div class="col-lg-6 col-md-6 col-sx-6 col-sm-6">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row2.item2.img }}) no-repeat center; background-size: cover;">
-              <div class="item-title">
-                <h2>{{ page.imagegrids.items.row2.item2.title }}</h2>
-              </div>
-            </div>
-          </div>
-        </a>
+        {% endfor %}
       </div>
       <div class="row">
-        <a href="{{ page.imagegrids.items.row3.item1.href }}" title="{{ page.imagegrids.items.row3.item1.title }}">
+        {% for line in page.imagegrids.items.row3 %}
+        <a href="{{ line.href }}" title="{{ line.title }}">
           <div class="col-lg-4 col-md-4 col-sx-4 col-sm-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row3.item1.img }}) no-repeat center;background-size: cover;">
+            <div class="item-wrapper" style="background:url({{ line.img }}) no-repeat center;background-size: cover;">
               <div class="item-title">
-                <h2>{{ page.imagegrids.items.row3.item1.title }}</h2>
+                <h2>{{ line.title }}</h2>
               </div>
             </div>
           </div>
         </a>
-        <a href="{{ page.imagegrids.items.row3.item2.href }}" title="{{ page.imagegrids.items.row3.item2.title }}">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-sx-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row3.item2.img }}) no-repeat center; background-size: cover;">
-              <div class="item-title">
-                <h2>{{ page.imagegrids.items.row3.item2.title }}</h2>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="{{ page.imagegrids.items.row3.item3.href }}" title="{{ page.imagegrids.items.row3.item3.title }}">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-sx-4">
-            <div class="item-wrapper" style="background:url({{ page.imagegrids.items.row3.item3.img }}) no-repeat center; background-size: cover;">
-              <div class="item-title">
-                <h2>{{ page.imagegrids.items.row3.item3.title }}</h2>
-              </div>
-            </div>
-          </div>
-        </a>
+        {% endfor %}
       </div>
     </div>
 
