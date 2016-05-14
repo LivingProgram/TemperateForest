@@ -1,0 +1,70 @@
+---
+title : TemperateForest Contact
+contact :
+  items :
+    header :
+      title : Contact Information
+      text : If you have any questions, concerns, or suggestions regarding this website please contact LivingProgram at kyhan316@gmail.com
+  css :
+    '#section-header > h2' :		
+      text-align: center		
+      margin-bottom: 46px		
+      font-weight: 800 		
+      font-size: 60px 		
+    '#section-header > p' :		
+      text-align: center		
+      margin-bottom: 70px		
+      font-weight: normal		
+      line-height: 38px		
+      font-size: 25px
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    {% include resources.html %}
+    <style>
+      {% include animals_nav.css %}
+      {% for selector in page.contact.css %}
+        {{ selector[0] }} {
+         {% for css in selector[1] %}
+           {{ css[0] }} : {{ css[1] }}; 
+         {% endfor %}
+        }
+      {% endfor %}
+      {% include footer.css %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    {% include nav.html %}
+
+    <div style="background: url(/TemperateForest/images/contact-main.jpg) no-repeat center;height: 100vh;background-size: cover;"></div>
+
+    <div class="container">
+      <div id="section-header">
+        <h2>{{ page.contact.items.header.title }}</h2>
+        <p>{{ page.contact.items.header.text }}</p>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
