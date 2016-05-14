@@ -64,8 +64,9 @@ nav :
       box-shadow: none
 contact :
   items :
-    title : Contact Information
-    text : If you have any questions, concerns, or suggestions regarding this website please contact LivingProgram at kyhan316@gmail.com
+    header :
+      title : Contact Information
+      text : If you have any questions, concerns, or suggestions regarding this website please contact LivingProgram at kyhan316@gmail.com
   css :
     '#section-header > h2' :		
       text-align: center		
@@ -172,8 +173,8 @@ footer :
 
     <div class="container">
       <div id="section-header">
-        <h2>{{ page.models.items.header.title }}</h2>
-        <p>{{ page.models.items.header.text }}</p>
+        <h2>{{ page.contact.items.header.title }}</h2>
+        <p>{{ page.contact.items.header.text }}</p>
       </div>
     </div>
 
