@@ -40,7 +40,9 @@ title : TemperateForest Barred Owl
     </div>
 
     <div class="container explanations">
-      {% for line in site.data.profiles.barred_owl.content %}	
+      <h1>Linnean Classification</h1>
+      <p> {{ site.data.profiles.barred_owl.content.classification.main }} <i>{{ site.data.profiles.barred_owl.content.classification.italics }}</i></p>
+      {% for line in site.data.profiles.barred_owl.content.other %}	
         {% for item in line %}
         <h1>{{ item[0] }}</h1>
         <p>{{ item[1] }}</p>
