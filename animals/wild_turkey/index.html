@@ -40,7 +40,9 @@ title : TemperateForest Wild Turkey
     </div>
 
     <div class="container explanations">
-      {% for line in site.data.profiles.wild_turkey.content %}	
+      <h1>Linnean Classification</h1>
+      <p> {{ site.data.profiles.wild_turkey.content.classification.main }} <i>{{ site.data.profiles.wild_turkey.content.classification.italics }}</i></p>
+      {% for line in site.data.profiles.wild_turkey.content.other %}	
         {% for item in line %}
         <h1>{{ item[0] }}</h1>
         <p>{{ item[1] }}</p>
