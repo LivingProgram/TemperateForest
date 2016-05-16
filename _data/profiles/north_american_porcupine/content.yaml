@@ -1,7 +1,10 @@
-- 'Linnean Classification': Eukarya, Animalia, Chordata, Mammalia, Rodentia, Erethizontidae, Erethizon, Erethizon dorsatum
-- Regulator: They can maintain their own body temperatures (homeostasis)
-- Dormancy: They do not migrate. They also, however, do not take in a lot of food before winter and do not sleep throughout winter. Instead, they stay active and stay close to their dens.
-- Generalist: They eat a wide variety of foods and can survive in a variety of environments
-- Consumer: They are unable to produce their own food and rely on producers and other consumers for their food nutrients 
-- Omnivore: Its diet consists of both plants and animals
-- Niche: The North American Porcupine is generally found in deciduous regions, and will live in homes that have already been abandoned. The porcupine will eat many plants including shrubs and fruits, but will also eat animals such as rodents. Porcupines will increase the variety they eat during the winter. Even by doing so, the porcupines lose 17-31% of their body weight, but regain their weight during the summer. 
+classification :
+  main : Eukarya, Animalia, Chordata, Mammalia, Rodentia, Erethizontidae, Erethizon, 
+  italics : Erethizon dorsatum
+other :
+  - Regulator: They can maintain their own body temperatures (homeostasis)
+  - Dormancy: They do not migrate. They also, however, do not take in a lot of food before winter and do not sleep throughout winter. Instead, they stay active and stay close to their dens.
+  - Generalist: They eat a wide variety of foods and can survive in a variety of environments
+  - Consumer: They are unable to produce their own food and rely on producers and other consumers for their food nutrients 
+  - Omnivore: Its diet consists of both plants and animals
+  - Niche: The North American Porcupine is generally found in deciduous regions, and will live in homes that have already been abandoned. The porcupine will eat many plants including shrubs and fruits, but will also eat animals such as rodents. Porcupines will increase the variety they eat during the winter. Even by doing so, the porcupines lose 17-31% of their body weight, but regain their weight during the summer. 
