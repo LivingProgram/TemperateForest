@@ -40,7 +40,9 @@ title : TemperateForest Red Panda
     </div>
 
     <div class="container explanations">
-      {% for line in site.data.profiles.red_panda.content %}	
+      <h1>Linnean Classification</h1>
+      <p> {{ site.data.profiles.red_panda.content.classification.main }} <i>{{ site.data.profiles.red_panda.content.classification.italics }}</i></p>
+      {% for line in site.data.profiles.red_panda.content.other %}	
         {% for item in line %}
         <h1>{{ item[0] }}</h1>
         <p>{{ item[1] }}</p>
