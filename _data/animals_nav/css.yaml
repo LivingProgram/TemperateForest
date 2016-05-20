@@ -12,8 +12,8 @@
     .navbar-default :
       border-color: transparent
     .navbar-default .navbar-nav>li>a.special-hover :
-      color: '#FFFFFF !important'
-      font-size: '18px !important'
+      color: '#FFFFFF'
+      font-size: '18px'
     .nav > li > a.special-hover:hover :
       color : '#00FFFD !important'
     .nav > li > a.special-hover:before :
