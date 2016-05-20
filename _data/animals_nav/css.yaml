@@ -72,3 +72,4 @@
       font-size: 18px
     .dropdown-menu>li>a:hover :
       color: '#00FFFD'
+      background-color: transparent
