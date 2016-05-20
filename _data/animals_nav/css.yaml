@@ -63,7 +63,7 @@
       left: 10px
       top: 11px
     .nav>li>a:hover :
-      background: 'linear-gradient(to top, #272727 50%, #A9A9A9 117%)'
+      background-color: transparent
     .dropdown-menu :
       background-color: rgb(51, 51, 51)
     .dropdown-menu>li>a :
@@ -72,4 +72,4 @@
       font-size: 18px
     .dropdown-menu>li>a:hover :
       color: '#00FFFD'
-      background-color: transparent
+      background: 'linear-gradient(to top, #272727 50%, #A9A9A9 117%)'
