@@ -63,3 +63,5 @@
       left: 10px
       top: 11px
       left: -6px
+    .nav>li>a:hover :
+      background-color: transparent
