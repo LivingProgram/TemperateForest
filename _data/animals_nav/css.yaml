@@ -15,6 +15,7 @@
       color: '#FFFFFF'
       font-size: '18px'
       padding-top: 15px
+      padding-bottom: 15px
     .nav > li > a.special-hover:hover :
       color : '#00FFFD !important'
     .nav > li > a.special-hover:before :
