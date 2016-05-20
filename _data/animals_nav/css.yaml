@@ -64,3 +64,5 @@
       top: 11px
     .nav>li>a:hover :
       background-color: transparent
+    .dropdown-menu :
+      rgb(51, 51, 51)
