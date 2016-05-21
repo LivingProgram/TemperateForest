@@ -1,18 +1,5 @@
 ---
 title : TemperateForest Diagrams
-models :
-  items :
-    header :
-      title : Temperate Forest Models
-      text : Explore the extraordinary relationships between animals in the Temperate Forest.
-  css :
-    .modelsPlaceholder :
-      background-color: '#808080'
-      height: 100vh
-    .modelsPlaceholder > h1 :
-      text-align: center
-      color: '#FFFFFF'
-      padding-top: 50vh
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -21,13 +8,6 @@ models :
     <style>
       {% include animals_nav.css %}
       {% for selector in page.imagegrids.css %}
-        {{ selector[0] }} {		
-          {% for css in selector[1] %}		
-            {{ css[0] }} : {{ css[1] }}; 		
-          {% endfor %}		
-        }
-      {% endfor %}
-      {% for selector in page.models.css %}
         {{ selector[0] }} {		
           {% for css in selector[1] %}		
             {{ css[0] }} : {{ css[1] }}; 		
@@ -53,16 +33,6 @@ models :
   <body>
 
     {% include nav.html %}
-
-    <div class="container">
-      <div id="section-header">
-        <h2>{{ page.models.items.header.title }}</h2>
-        <p>{{ page.models.items.header.text }}</p>
-      </div>
-      <div class="modelsPlaceholder"><h1>Cladogram</h1></div>
-      <div class="modelsPlaceholder"><h1>Food Web</h1></div>
-      <div class="modelsPlaceholder" style="margin-bottom: 20px"><h1>Trophic Level</h1></div>
-    </div>
 
     {% include footer.html %}
 
