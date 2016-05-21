@@ -1,7 +1,7 @@
   css :
     .footer-color-black :		
       background-color: rgba(30, 30, 30, 0.97)		
-      color: '#DDDDDD'		
+      color: '#00FF8D'		
     .footer nav > ul :		
       font-size: 16px		
       list-style: none		
@@ -16,17 +16,13 @@
     .footer nav > ul a :		
       padding: 10px 0px		
       margin: 15px 10px 15px 0px		
-      color: '#777777'		
       display: block		
       font-size: 14px		
       font-family: '"Droid Serif", "Helvetica Neue", "Helvetica","Arial"'		
     .footer .center-text :		
       font-size: 14px		
       font-family: '"Droid Serif", "Helvetica Neue", "Helvetica","Arial"'		
-      color: '#777777'		
       padding: 10px 15px		
       margin: 15px 3px		
       line-height: 20px		
       text-align: center		
-    .center-text a :		
-      color: '#FFFFFF'
