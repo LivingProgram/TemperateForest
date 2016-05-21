@@ -1,4 +1,8 @@
   css : 
+    body :
+      background-color: black
+      color: '#00FF8D' 
+      text-shadow: '-3px -3px 10px #5DFF97'
     '#nav' :
       min-height: 79px
       background: none
