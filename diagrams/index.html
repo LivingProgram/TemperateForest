@@ -1,1 +1,70 @@
+---
+title : TemperateForest Diagrams
+models :
+  items :
+    header :
+      title : Temperate Forest Models
+      text : Explore the extraordinary relationships between animals in the Temperate Forest.
+  css :
+    .modelsPlaceholder :
+      background-color: '#808080'
+      height: 100vh
+    .modelsPlaceholder > h1 :
+      text-align: center
+      color: '#FFFFFF'
+      padding-top: 50vh
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include animals_nav.css %}
+      {% for selector in page.imagegrids.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+      {% for selector in page.models.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+      {% include footer.css %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
 
+    {% include nav.html %}
+
+    <div class="container">
+      <div id="section-header">
+        <h2>{{ page.models.items.header.title }}</h2>
+        <p>{{ page.models.items.header.text }}</p>
+      </div>
+      <div class="modelsPlaceholder"><h1>Cladogram</h1></div>
+      <div class="modelsPlaceholder"><h1>Food Web</h1></div>
+      <div class="modelsPlaceholder" style="margin-bottom: 20px"><h1>Trophic Level</h1></div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
