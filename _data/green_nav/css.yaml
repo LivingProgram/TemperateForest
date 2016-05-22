@@ -17,7 +17,7 @@
       border-color: transparent
     .navbar-default .navbar-nav>li>a.special-hover, .nav>li>a :
       color: '#00FF8D'
-      font-size: '18px'
+      font-size: '11px'
       padding-top: 15px
       line-height: 20px
       -webkit-transition: font-size 2s
