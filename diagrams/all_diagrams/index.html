@@ -1,11 +1,5 @@
 ---
 title : TemperateForest All Diagrams
-nav :
-  css : 
-    .navbar-default .navbar-nav>li>a.special-hover, .nav>li>a :
-      font-size: 11px
-    .nav > li > a.special-hover:hover, .nav>li>a:hover
-      font-size: 20px
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -13,13 +7,6 @@ nav :
     {% include resources.html %}
     <style>
       {% include green_nav.css %}
-      {% for selector in page.nav.css %}
-        {{ selector[0] }} {		
-          {% for css in selector[1] %}		
-            {{ css[0] }} : {{ css[1] }}; 		
-          {% endfor %}		
-        }
-      {% endfor %}
       {% for selector in page.imagegrids.css %}
         {{ selector[0] }} {		
           {% for css in selector[1] %}		
