@@ -56,9 +56,9 @@ cladogram :
     </script>
     <style>
       .go-square.fill {
-        -webkit-animation-delay: 3900ms, 6900ms;
-        -webkit-animation-name: green-fill, fade-out;
-        -webkit-animation-duration: 3s, 3s;
+        -webkit-animation-delay: 3900ms, 6900ms, 9900ms;
+        -webkit-animation-name: green-fill, fade-out, fade-in;
+        -webkit-animation-duration: 3s, 3s, 3s;
         -webkit-animation-fill-mode: forwards;
       }
       @-webkit-keyframes green-fill {
@@ -68,6 +68,10 @@ cladogram :
       @-webkit-keyframes fade-out {
         from { opacity: 1; }
         to { opacity: 0; }
+      }
+      @-webkit-keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
     </style>
   </head>
