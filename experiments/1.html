@@ -50,8 +50,8 @@ cladogram :
           goBorder.style.strokeDashoffset = '0';
           
           $(document.querySelector('.go-square')).addClass('fill');
-          $('.go-text').delay(3900).hide(0);
-          $('.go-border').delay(3900).hide(0);
+          $('.go-text').delay(3900).fadeOut(1000);
+          $('.go-border').delay(3900).fadeOut(1000);
           
         });
       })
