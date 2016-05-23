@@ -35,6 +35,45 @@ cladogram :
         });
       });
     </script>
+    <script>
+    (function() {
+    
+      function toArray(arr) {
+        return Array.prototype.slice.call(arr);
+      }
+    
+      var svg = document.querySelector('.full-sketch-container svg');
+      svg.parentNode.style.display = 'block';
+      svg.style.visibility = 'hidden';
+    
+      function fullSketch() {
+        svg.style.visibility = '';
+        var paths = toArray(svg.querySelectorAll('path'));
+        var begin = 0;
+    
+        var durations = paths.map(function(path) {
+          var length = path.getTotalLength();
+    
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = length;
+          return Math.pow(length, 0.1);
+    
+        });
+    
+        // triggering a reflow so styles are calculated in their
+        // start position, so they animate from here
+        paths[0].getBoundingClientRect();
+    
+        paths.forEach(function(path, i) {
+          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + begin + 's ease-in-out';
+          path.style.strokeDashoffset = '0';
+          begin += durations[i] + 0.1;
+        });
+      }
+    
+      window.addEventListener('load', fullSketch);
+    }());
+    </script>
   </head>
   <body>
 
