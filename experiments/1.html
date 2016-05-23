@@ -74,6 +74,22 @@ cladogram :
       window.addEventListener('load', fullSketch);
     }());
     </script>
+    <script>
+      $(document).ready(function() {
+        var goBorder = document.querySelector('.go-border path');
+        var length = goBorder.getTotalLength();
+  
+        goBorder.style.transition = goBorder.style.WebkitTransition = 'none';
+        goBorder.style.strokeDasharray = length + ' ' + length;
+        goBorder.style.strokeDashoffset = length;
+  
+        $(document).click(function() {
+          goBorder.getBoundingClientRect();
+          goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
+          goBorder.style.strokeDashoffset = '0';
+        });
+      })
+    </script>
   </head>
   <body>
 
@@ -119,6 +135,30 @@ cladogram :
         <path d="M 1025 271 L 948 211" stroke="#00FF8D" stroke-width="6" fill="none"></path>
         <path d="M 948 211 L 870 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
         <path d="M 948 211 L 1059 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+      </svg>
+    </div>
+
+    <div id="go-square" style="
+        /* background-color: #00FF8D; */
+        width: 94px;
+        height: 88px;
+        position: absolute;
+        left: 627px;
+        top: 271px;
+        text-align: center;
+    ">
+      <h1 style="
+        color: #00FF8D;
+        font-size: 60px;
+        line-height: 79px;
+        margin-top: 5%;
+      ">Go</h1>
+      <svg viewBox="0 0 94 88" height="88px" class="go-border" width="94px" xmlns="http://www.w3.org/2000/svg" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+      ">
+        <path d="M 0 0 L 94 0 L 94 88 L 0 88 z" stroke="#00FF8D" stroke-width="6" fill="none"></path>
       </svg>
     </div>
 
