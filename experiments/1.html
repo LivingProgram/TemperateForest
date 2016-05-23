@@ -50,6 +50,8 @@ cladogram :
           goBorder.style.strokeDashoffset = '0';
           
           $(document.querySelector('.go-square')).addClass('fill');
+          $(document.querySelector('.go-square')).addClass('fade-out');
+          
         });
       })
     </script>
@@ -63,6 +65,16 @@ cladogram :
       @-webkit-keyframes green-fill {
         from { background-color: #000000; }
         to { background-color: #00FF8D; }
+      }
+      .go-square.fade-out {
+        -webkit-animation-delay: 6900ms;
+        -webkit-animation-name: fade-out;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes fade-out {
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
     </style>
   </head>
