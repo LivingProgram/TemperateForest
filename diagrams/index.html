@@ -7,13 +7,6 @@ title : TemperateForest Diagrams
     {% include resources.html %}
     <style>
       {% include green_nav.css %}
-      {% for selector in page.imagegrids.css %}
-        {{ selector[0] }} {		
-          {% for css in selector[1] %}		
-            {{ css[0] }} : {{ css[1] }}; 		
-          {% endfor %}		
-        }
-      {% endfor %}
       {% include green_footer.css %}
     </style>
     <script>
