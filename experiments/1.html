@@ -50,6 +50,8 @@ cladogram :
           goBorder.style.strokeDashoffset = '0';
           
           $(document.querySelector('.go-square')).addClass('fill');
+          $('.go-text').delay(4000).hide();
+          $('.go-border').delay(4000).hide();
           
         });
       })
@@ -140,7 +142,7 @@ cladogram :
         top: 271px;
         text-align: center;
     ">
-      <h1 style="
+      <h1 class="go-text" style="
         color: #00FF8D;
         font-size: 60px;
         line-height: 79px;
