@@ -87,9 +87,22 @@ cladogram :
           goBorder.getBoundingClientRect();
           goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
           goBorder.style.strokeDashoffset = '0';
+          
+          $(document.querySelector('.go-square')).addClass('fill');
         });
       })
     </script>
+    <style>
+      .go-square.fill {
+        -webkit-animation-delay: 0s;
+        -webkit-animation-duration: 500ms;
+        -webkit-animation-name: green-fill;
+      }
+      @-webkit-keyframes green-fill {
+        from { background-color: #000000; }
+        to { background-color: #00FF8D; }
+      }
+    </style>
   </head>
   <body>
 
@@ -139,7 +152,7 @@ cladogram :
     </div>
 
     <div class="go-square" style="
-        /* background-color: #00FF8D; */
+        background-color: #000000;
         width: 94px;
         height: 88px;
         position: absolute;
