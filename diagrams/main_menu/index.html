@@ -1,5 +1,39 @@
 ---
 title : TemperateForest Diagrams Main
+menu :
+  css :
+    a.special-hover:before :
+      content : ""
+      position : absolute
+      width : 100%
+      height : 2px
+      bottom : 0
+      left : 0
+      background-color : '#FFFFFF'
+      visibility : hidden
+      -webkit-transform : scaleX(0)
+      transform : scaleX(0)
+      -webkit-transition : all 0.3s ease-in-out 0s
+      transition : all 0.3s ease-in-out 0s
+    a.special-hover:hover:before :
+      visibility : visible
+      -webkit-transform : scaleX(1)
+      transform : scaleX(1)
+    '#menu' :
+      width: 60%
+      margin: auto
+      height: 40vh
+    '#menu > li' :
+      position: relative
+      display: block
+      float: left
+      padding-left: 100px
+    '#menu > li > a' :
+      color: '#E1FFF1'
+      text-decoration: none
+      font-size: 30px
+      position: relative
+      display: block
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -7,6 +41,13 @@ title : TemperateForest Diagrams Main
     {% include resources.html %}
     <style>
       {% include green_nav.css %}
+      {% for selector in page.menu.css %}
+        {{ selector[0] }} {
+         {% for css in selector[1] %}
+           {{ css[0] }} : {{ css[1] }}; 
+         {% endfor %}
+        }
+      {% endfor %}
       {% include green_footer.css %}
     </style>
     <script>
@@ -94,6 +135,12 @@ title : TemperateForest Diagrams Main
       <span id="typed" style="white-space:pre;"></span>
     </div>
     
+    <ul id="menu">
+      <li><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Cladogram</a></li>
+      <li><a href="http://livingprogram.github.io/TemperateForest/diagrams" class="special-hover">Food Web</a></li>
+      <li><a href="http://livingprogram.github.io/TemperateForest/contact" class="special-hover">Trophic Level</a></li>
+    </ul>
+
     {% include footer.html %}
 
   </body>
