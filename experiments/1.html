@@ -1,0 +1,127 @@
+---
+title : TemperateForest Cladogram
+cladogram :
+  css :
+    .cladogram-images :
+      position: absolute
+      top: 65px
+      width: 94px
+      height: 88px
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include green_nav.css %}
+      {% for selector in page.cladogram.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+    <script>
+    (function() {
+    
+      function toArray(arr) {
+        return Array.prototype.slice.call(arr);
+      }
+    
+      var svg = document.querySelector('.full-sketch-container svg');
+      svg.parentNode.style.display = 'block';
+      svg.style.visibility = 'hidden';
+    
+      function fullSketch() {
+        svg.style.visibility = '';
+        var paths = toArray(svg.querySelectorAll('path'));
+        var begin = 0;
+    
+        var durations = paths.map(function(path) {
+          var length = path.getTotalLength();
+    
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = length;
+          return Math.pow(length, 0.1);
+    
+        });
+    
+        // triggering a reflow so styles are calculated in their
+        // start position, so they animate from here
+        paths[0].getBoundingClientRect();
+    
+        paths.forEach(function(path, i) {
+          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + begin + 's ease-in-out';
+          path.style.strokeDashoffset = '0';
+          begin += durations[i] + 0.1;
+        });
+      }
+    
+      window.addEventListener('load', fullSketch);
+    }());
+    </script>
+  </head>
+  <body>
+
+    {% include nav.html %}
+
+    <img src="/TemperateForest/images/animals/red_panda.jpg" class="cladogram-images" style="
+      left: 67px;
+    ">
+    <img src="/TemperateForest/images/animals/grizzly_bear.jpg" class="cladogram-images" style="
+      left: 256px;
+    ">
+    <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" style="
+      left: 445px;
+    ">
+    <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" style="
+      left: 634px;
+    ">
+    <img src="/TemperateForest/images/animals/mallard.jpg" class="cladogram-images" style="
+      left: 823px;
+    ">
+    <img src="/TemperateForest/images/animals/barred_owl.jpg" class="cladogram-images" style="
+      left: 1012px;
+    ">
+    <img src="/TemperateForest/images/animals/peacock.jpg" class="cladogram-images" style="
+      left: 1201px;
+    ">
+    
+    <div class="full-sketch-container">
+      <svg viewBox="0 0 1366 625" height="625" width="1366" xmlns="http://www.w3.org/2000/svg">
+        <!--<path d="M 350 625 L 1250 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 350 625 L 575 507" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 575 507 L 800 389" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <!--<path d="M 575 507 L 114 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 575 507 L 345 329" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 345 329 L 230 240" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 345 329 L 492 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 230 240 L 114 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 230 240 L 303 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 800 389 L 1025 271" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 800 389 L 681 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 1025 271 L 1250 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <!--<path d="M 1025 271 L 870 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 1025 271 L 948 211" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 948 211 L 870 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 948 211 L 1059 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+      </svg>
+    </div>
+
+  </body>
+</html>
+
