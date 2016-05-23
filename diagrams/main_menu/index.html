@@ -2,7 +2,7 @@
 title : TemperateForest Diagrams Main
 menu :
   css :
-    a.special-hover:before :
+    a.menu-item:before :
       content : '""'
       position : absolute
       width : 100%
@@ -15,7 +15,7 @@ menu :
       transform : scaleX(0)
       -webkit-transition : all 0.3s ease-in-out 0s
       transition : all 0.3s ease-in-out 0s
-    a.special-hover:hover:before :
+    a.menu-item:hover:before :
       visibility : visible
       -webkit-transform : scaleX(1)
       transform : scaleX(1)
@@ -136,9 +136,9 @@ menu :
     </div>
     
     <ul id="menu">
-      <li><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Cladogram</a></li>
-      <li><a href="http://livingprogram.github.io/TemperateForest/diagrams" class="special-hover">Food Web</a></li>
-      <li><a href="http://livingprogram.github.io/TemperateForest/contact" class="special-hover">Trophic Level</a></li>
+      <li><a href="https://livingprogram.github.io/TemperateForest/" class="menu-item">Cladogram</a></li>
+      <li><a href="http://livingprogram.github.io/TemperateForest/diagrams" class="menu-item">Food Web</a></li>
+      <li><a href="http://livingprogram.github.io/TemperateForest/contact" class="menu-item">Trophic Level</a></li>
     </ul>
 
     {% include footer.html %}
