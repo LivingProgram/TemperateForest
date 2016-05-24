@@ -50,7 +50,7 @@ cladogram :
           goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
           goBorder.style.strokeDashoffset = '0';
           
-          $(document.querySelector('.go-square')).addClass('fill');
+          $(document.querySelector('.go-sqr')).addClass('fill');
           $('.go-text').delay(3900).fadeOut(1000);
           $('.go-border').delay(3900).fadeOut(1000);
           
@@ -58,7 +58,7 @@ cladogram :
       })
     </script>
     <style>
-      .go-square.fill {
+      .go-sqr.fill {
         -webkit-animation-delay: 3900ms, 6900ms, 10000ms, 10000ms, 10000ms, 15000ms, 15400ms, 15500ms;
         -webkit-animation-name: green-fill, fade-out, fade-in, change-color, button-bounce, rotate, explode, normal-color;
         -webkit-animation-duration: 3s, 3s, 12s, 6s, 6s, 1s, 100ms, 1ms;
@@ -172,7 +172,7 @@ cladogram :
       </svg>
     </div>
 
-    <div class="go-square" style="
+    <div class="go-sqr" style="
         background-color: #000000;
         width: 94px;
         height: 88px;
@@ -195,6 +195,14 @@ cladogram :
         <path d="M 0 0 L 94 0 L 94 88 L 0 88 z" stroke="#00FF8D" stroke-width="6" fill="none"></path>
       </svg>
     </div>
+    <div class="img-sqr" id="img-sqr-1" style="
+        background-color: #00FF8D;
+        width: 47px;
+        height: 44px;
+        position: absolute;
+        left: 627px;
+        top: 271px;
+    "></div>
 
   </body>
 </html>
