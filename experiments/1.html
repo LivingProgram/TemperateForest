@@ -59,9 +59,9 @@ cladogram :
     </script>
     <style>
       .go-square.fill {
-        -webkit-animation-delay: 3900ms, 6900ms, 10000ms, 10000ms, 10000ms, 12000ms, 14000ms;
-        -webkit-animation-name: green-fill, fade-out, fade-in, change-color, button-bounce, button-bounce, button-bounce;
-        -webkit-animation-duration: 3s, 3s, 12s, 6s, 2s, 2s, 2s;
+        -webkit-animation-delay: 3900ms, 6900ms, 10000ms, 10000ms, 10000ms;
+        -webkit-animation-name: green-fill, fade-out, fade-in, change-color, button-bounce;
+        -webkit-animation-duration: 3s, 3s, 12s, 6s, 6s;
         -webkit-animation-fill-mode: forwards;
       }
       @-webkit-keyframes green-fill {
@@ -86,13 +86,27 @@ cladogram :
         100% { background-color: #99ffd1; }
       }
       @-webkit-keyframes button-bounce {
-        0% { -webkit-transform: scale(1); }
-        17% { -webkit-transform: scale(.8); }
-        33% { -webkit-transform: scale(1); }
-        50% { -webkit-transform: scale(.8); }
-        67% { -webkit-transform: scale(1); }
-        83% { -webkit-transform: scale(.8); }
-        100% { -webkit-transform: scale(1); }
+        0% { -webkit-transform: scale(.2); }
+        5% { -webkit-transform: scale(.1); }
+        10% { -webkit-transform: scale(.3); }
+        15% { -webkit-transform: scale(.2); }
+        20% { -webkit-transform: scale(.4); }
+        25% { -webkit-transform: scale(.3); }
+        30% { -webkit-transform: scale(.5); }
+        35% { -webkit-transform: scale(.4); }
+        40% { -webkit-transform: scale(.6); }
+        45% { -webkit-transform: scale(.4); }
+        50% { -webkit-transform: scale(.7); }
+        55% { -webkit-transform: scale(.5); }
+        60% { -webkit-transform: scale(.9); }
+        65% { -webkit-transform: scale(.6); }
+        70% { -webkit-transform: scale(1.3); }
+        75% { -webkit-transform: scale(.8); }
+        80% { -webkit-transform: scale(1.4); }
+        85% { -webkit-transform: scale(.8); }
+        90% { -webkit-transform: scale(1.5); }
+        95% { -webkit-transform: scale(.8); }
+        100% { -webkit-transform: scale(1.5); }
       }
     </style>
   </head>
