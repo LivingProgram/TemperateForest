@@ -54,9 +54,23 @@ cladogram :
           $('.go-text').delay(3900).fadeOut(1000);
           $('.go-border').delay(3900).fadeOut(1000);
           
+          $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
+          
         });
       })
     </script>
+    <style>
+      #img-sqr-1.sqr-1-animation {
+        -webkit-animation-delay: 15450ms;
+        -webkit-animation-name: move-to-column;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column {
+        0% { left: 627px; }
+        100% { left: 67px; }
+      }
+    </style>
     <style>
       .go-sqr.fill {
         -webkit-animation-delay: 3900ms, 6900ms, 10000ms, 10000ms, 10000ms, 15000ms, 15400ms, 15500ms;
