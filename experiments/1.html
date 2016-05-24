@@ -106,7 +106,7 @@ cladogram :
         85% { -webkit-transform: scale(.8); }
         90% { -webkit-transform: scale(1.5); }
         95% { -webkit-transform: scale(.8); }
-        100% { -webkit-transform: scale(1.5); }
+        100% { -webkit-transform: scale(3); }
       }
       @-webkit-keyframes rotate {
         0% { -webkit-transform: rotate(0deg); }
@@ -114,7 +114,8 @@ cladogram :
       }
       @-webkit-keyframes explode {
         0% { -webkit-transform: scale(1.5); }
-        100% { -webkit-transform: rotate(5); }
+        50% { -webkit-transform: scale(5); }
+        100% { -webkit-transform: scale(1); }
       }
     </style>
   </head>
