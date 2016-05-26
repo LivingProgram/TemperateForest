@@ -55,7 +55,7 @@ cladogram :
           $('.go-border').delay(3900).fadeOut(1000);
           
           $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
-          
+          $('#red-panda-img').delay(22220).fadeIn(100);
         });
       })
     </script>
@@ -63,7 +63,7 @@ cladogram :
       #img-sqr-1.sqr-1-animation {
         -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 19420ms, 20020ms, 22420ms;
         -webkit-animation-name: fade-in, move-to-column, spinning, bounce, grow, explode2;
-        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 500ms;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
         -webkit-animation-fill-mode: forwards;
       }
       @-webkit-keyframes move-to-column {
@@ -161,7 +161,7 @@ cladogram :
 
     {% include nav.html %}
 
-    <img src="/TemperateForest/images/animals/red_panda.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/red_panda.jpg" class="cladogram-images" id="red-panda-img" style="
       left: 67px;
     ">
     <img src="/TemperateForest/images/animals/grizzly_bear.jpg" class="cladogram-images" style="
