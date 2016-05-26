@@ -61,9 +61,9 @@ cladogram :
     </script>
     <style>
       #img-sqr-1.sqr-1-animation {
-        -webkit-animation-delay: 15420ms, 15420ms, 15420ms;
-        -webkit-animation-name: fade-in, move-to-column, spinning;
-        -webkit-animation-duration: 1ms, 80ms, 5s;
+        -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 20420ms, 23420ms, 24020ms;
+        -webkit-animation-name: fade-in, move-to-column, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 5s, 3s, 600ms, 2500ms;
         -webkit-animation-fill-mode: forwards;
       }
       @-webkit-keyframes move-to-column {
@@ -86,9 +86,9 @@ cladogram :
         100% { -webkit-transform: scale(2); }
       }
       @-webkit-keyframes explode2 {
-        0% { -webkit-transform: scale(1); background-color: #00FF8D; opacity: 1;}
-        50% { -webkit-transform: scale(2); background-color: #99ffd1; opacity: 1;}
-        100% { -webkit-transform: scale(1); background-color: #FFFFFF; opacity: 0;}
+        0% { -webkit-transform: scale(2); background-color: #00FF8D; opacity: 1;}
+        50% { -webkit-transform: scale(4); background-color: #99ffd1; opacity: 1;}
+        100% { -webkit-transform: scale(2); background-color: #FFFFFF; opacity: 0;}
       }
     </style>
     <style>
