@@ -80,6 +80,7 @@ cladogram :
           $('.go-border').delay(3900).fadeOut(1000);
           
           $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
+          $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
           $('#red-panda-img').delay(22220).show(100);
         });
       })
@@ -87,14 +88,25 @@ cladogram :
     <style>
       #img-sqr-1.sqr-1-animation {
         -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 19420ms, 20020ms, 22420ms;
-        -webkit-animation-name: fade-in, move-to-column, spinning, bounce, grow, explode2;
+        -webkit-animation-name: fade-in, move-to-column1, spinning, bounce, grow, explode2;
         -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
         -webkit-animation-fill-mode: forwards;
       }
-      @-webkit-keyframes move-to-column {
+      @-webkit-keyframes move-to-column1 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 279px; top: 293px; }
+      }
+      #img-sqr-2.sqr-2-animation {
+        -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 19420ms, 20020ms, 22420ms;
+        -webkit-animation-name: fade-in, move-to-column2, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column2 {
         0% { left: 627px; top: 271px;}
         100% { left: 90px; top: 293px; }
       }
+
       @-webkit-keyframes spinning {
         0% { -webkit-transform: rotate(0deg); }
         100% { -webkit-transform: rotate(4680deg); }
@@ -239,6 +251,7 @@ cladogram :
     </div>
 
     <div class="img-sqr" id="img-sqr-1"></div>
+    <div class="img-sqr" id="img-sqr-2"></div>
 
   </body>
 </html>
