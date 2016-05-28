@@ -35,6 +35,26 @@ cladogram :
         });
       });
     </script>
+    <script>
+      $(document).ready(function() {
+          $(document.querySelector('#red-panda-img')).addClass('img-animation');
+          $(document.querySelector('#grizzly-bear-img')).addClass('img-animation');
+          $(document.querySelector('#wild-turkey-img')).addClass('img-animation');
+          $(document.querySelector('#north-american-porcupine-img')).addClass('img-animation');
+          $(document.querySelector('#mallard-img')).addClass('img-animation');
+          $(document.querySelector('#barred-owl-img')).addClass('img-animation');
+          $(document.querySelector('#peacock-img')).addClass('img-animation');
+      })
+    </script>
+    <style>
+      .img-animation {
+        -webkit-animation: 1s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        50% { -webkit-transform: rotate(360deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
   </head>
   <body>
 
