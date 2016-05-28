@@ -54,6 +54,13 @@ cladogram :
             contentType: 'html',
             loopCount: false,
         });
+        $("#claws").typed({
+            stringsElement: $('#claws-strings'),
+            typeSpeed: 200,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+        });
         $(document).click(function() {
         
         });
@@ -119,7 +126,13 @@ cladogram :
       </div>
       <span id="eyes" style="white-space:pre;"></span>
     </div>
-    
+    <div style="font-size: 20px;position: absolute;top: 168px;left: 1119px;">
+      <div id="claws-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Semiretractable Claws</p>
+      </div>
+      <span id="claws" style="white-space:pre;"></span>
+    </div>
+
     <div class="full-sketch-container">
       <svg viewBox="0 0 1366 625" height="625" width="1366" xmlns="http://www.w3.org/2000/svg">
         <!--<path d="M 350 625 L 1250 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
