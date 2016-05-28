@@ -41,6 +41,14 @@ cladogram :
             contentType: 'html',
             loopCount: false,
         });
+        $("#talons").typed({
+            stringsElement: $('#talons-strings'),
+            typeSpeed: 80,
+            backDelay: 1000,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+        });
         $(document).click(function() {
         
         });
@@ -93,6 +101,12 @@ cladogram :
         <p><strong style="font-size: 71px;">\</strong>Amniotic Egg</p>
       </div>
       <span id="egg" style="white-space:pre;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 399px;left: 680px;">
+      <div id="talons-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Sharp Talons</p>
+      </div>
+      <span id="talons" style="white-space:pre;"></span>
     </div>
     
     <div class="full-sketch-container">
