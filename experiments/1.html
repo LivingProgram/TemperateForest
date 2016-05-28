@@ -69,37 +69,7 @@ cladogram :
         goBorder.style.transition = goBorder.style.WebkitTransition = 'none';
         goBorder.style.strokeDasharray = length + ' ' + length;
         goBorder.style.strokeDashoffset = length;
-  
-        $(document).click(function() {
-          goBorder.getBoundingClientRect();
-          goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
-          goBorder.style.strokeDashoffset = '0';
-          
-          $(document.querySelector('.go-sqr')).addClass('fill');
-          $('.go-text').delay(100).fadeOut(1500);
-          $('.go-border').delay(3900).fadeOut(1000);
-          
-          $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
-          $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
-          $(document.querySelector('#img-sqr-3')).addClass('sqr-3-animation');
-          $(document.querySelector('#img-sqr-4')).addClass('sqr-4-animation');
-          $(document.querySelector('#img-sqr-5')).addClass('sqr-5-animation');
-          $(document.querySelector('#img-sqr-6')).addClass('sqr-6-animation');
-          $(document.querySelector('#img-sqr-7')).addClass('sqr-7-animation');
-          $('#red-panda-img').delay(22220).show(100);
-          $('#grizzly-bear-img').delay(22420).show(100);
-          $('#wild-turkey-img').delay(22620).show(100);
-          $('#north-american-porcupine-img').delay(22820).show(100);
-          $('#mallard-img').delay(23020).show(100);
-          $('#barred-owl-img').delay(23220).show(100);
-          $('#peacock-img').delay(23420).show(100);
-          
-          setTimeout(fullSketch, 2000);
-        });
-      })
-    </script>
-    <script>
-      $(document).ready(function() {
+
       function toArray(arr) {
         return Array.prototype.slice.call(arr);
       }
@@ -132,6 +102,33 @@ cladogram :
           begin += durations[i] + 0.1;
         });
       }
+
+        $(document).click(function() {
+          goBorder.getBoundingClientRect();
+          goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
+          goBorder.style.strokeDashoffset = '0';
+          
+          $(document.querySelector('.go-sqr')).addClass('fill');
+          $('.go-text').delay(100).fadeOut(1500);
+          $('.go-border').delay(3900).fadeOut(1000);
+          
+          $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
+          $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
+          $(document.querySelector('#img-sqr-3')).addClass('sqr-3-animation');
+          $(document.querySelector('#img-sqr-4')).addClass('sqr-4-animation');
+          $(document.querySelector('#img-sqr-5')).addClass('sqr-5-animation');
+          $(document.querySelector('#img-sqr-6')).addClass('sqr-6-animation');
+          $(document.querySelector('#img-sqr-7')).addClass('sqr-7-animation');
+          $('#red-panda-img').delay(22220).show(100);
+          $('#grizzly-bear-img').delay(22420).show(100);
+          $('#wild-turkey-img').delay(22620).show(100);
+          $('#north-american-porcupine-img').delay(22820).show(100);
+          $('#mallard-img').delay(23020).show(100);
+          $('#barred-owl-img').delay(23220).show(100);
+          $('#peacock-img').delay(23420).show(100);
+          
+          setTimeout(fullSketch, 2000);
+        });
       })
     </script>
     <style>
