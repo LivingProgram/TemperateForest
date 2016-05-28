@@ -1,0 +1,66 @@
+---
+title : TemperateForest Cladogram
+cladogram :
+  css :
+    .cladogram-images :
+      position: absolute
+      top: 65px
+      width: 94px
+      height: 88px
+      display: none
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include green_nav.css %}
+      {% for selector in page.cladogram.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    {% include nav.html %}
+
+    <img src="/TemperateForest/images/animals/red_panda.jpg" class="cladogram-images" id="red-panda-img" style="
+      left: 67px;
+    ">
+    <img src="/TemperateForest/images/animals/grizzly_bear.jpg" class="cladogram-images" id="grizzly-bear-img" style="
+      left: 256px;
+    ">
+    <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" id="wild-turkey-img" style="
+      left: 445px;
+    ">
+    <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" id="north-american-porcupine-img" style="
+      left: 634px;
+    ">
+    <img src="/TemperateForest/images/animals/mallard.jpg" class="cladogram-images" id="mallard-img" style="
+      left: 823px;
+    ">
+    <img src="/TemperateForest/images/animals/barred_owl.jpg" class="cladogram-images" id="barred-owl-img" style="
+      left: 1012px;
+    ">
+    <img src="/TemperateForest/images/animals/peacock.jpg" class="cladogram-images" id="peacock-img" style="
+      left: 1201px;
+    ">
+  </body>
+</html>
