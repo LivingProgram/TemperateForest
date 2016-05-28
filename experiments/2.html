@@ -68,6 +68,13 @@ cladogram :
             contentType: 'html',
             loopCount: false,
         });
+        $("#wattle").typed({
+            stringsElement: $('#wattle-strings'),
+            typeSpeed: 200,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+        });
         $(document).click(function() {
         
         });
@@ -144,6 +151,12 @@ cladogram :
         <p><strong style="font-size: 71px;">\</strong>Sharp Quills</p>
       </div>
       <span id="quills" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 211px;left: 432px;">
+      <div id="wattle-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Wattle</p>
+      </div>
+      <span id="wattle" style="white-space:pre; line-height: 0px;"></span>
     </div>
 
     <div class="full-sketch-container">
