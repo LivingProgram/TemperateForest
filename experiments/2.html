@@ -47,6 +47,13 @@ cladogram :
             contentType: 'html',
             loopCount: false,
         });
+        $("#eyes").typed({
+            stringsElement: $('#eyes-strings'),
+            typeSpeed: 200,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+        });
         $(document).click(function() {
         
         });
@@ -105,6 +112,12 @@ cladogram :
         <p><strong style="font-size: 71px;">\</strong>Sharp Talons</p>
       </div>
       <span id="talons" style="white-space:pre;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 282px;left: 900px;">
+      <div id="eyes-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Forward Facing Eyes</p>
+      </div>
+      <span id="eyes" style="white-space:pre;"></span>
     </div>
     
     <div class="full-sketch-container">
