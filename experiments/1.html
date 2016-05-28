@@ -97,9 +97,8 @@ cladogram :
         paths[0].getBoundingClientRect();
     
         paths.forEach(function(path, i) {
-          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + begin + 's ease-in-out';
+          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + 'ease-in-out';
           path.style.strokeDashoffset = '0';
-          begin += durations[i] + 0.1;
         });
       }
 
