@@ -81,8 +81,10 @@ cladogram :
           
           $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
           $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
+          $(document.querySelector('#img-sqr-3')).addClass('sqr-3-animation');
           $('#red-panda-img').delay(22220).show(100);
           $('#grizzly-bear-img').delay(22420).show(100);
+          $('#wild-turkey-img').delay(22620).show(100);
         });
       })
     </script>
@@ -106,6 +108,16 @@ cladogram :
       @-webkit-keyframes move-to-column2 {
         0% { left: 627px; top: 271px;}
         100% { left: 279px; top: 293px; }
+      }
+      #img-sqr-3.sqr-3-animation {
+        -webkit-animation-delay: 15820ms, 15820ms, 15820ms, 19820ms, 20420ms, 22820ms;
+        -webkit-animation-name: fade-in, move-to-column2, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column2 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 468px; top: 293px; }
       }
 
       @-webkit-keyframes spinning {
@@ -205,7 +217,7 @@ cladogram :
     <img src="/TemperateForest/images/animals/grizzly_bear.jpg" class="cladogram-images" id="grizzly-bear-img" style="
       left: 256px;
     ">
-    <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" id="wild-turkey-img" style="
       left: 445px;
     ">
     <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" style="
@@ -253,6 +265,7 @@ cladogram :
 
     <div class="img-sqr" id="img-sqr-1"></div>
     <div class="img-sqr" id="img-sqr-2"></div>
+    <div class="img-sqr" id="img-sqr-3"></div>
 
   </body>
 </html>
