@@ -82,9 +82,17 @@ cladogram :
           $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
           $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
           $(document.querySelector('#img-sqr-3')).addClass('sqr-3-animation');
+          $(document.querySelector('#img-sqr-4')).addClass('sqr-4-animation');
+          $(document.querySelector('#img-sqr-5')).addClass('sqr-5-animation');
+          $(document.querySelector('#img-sqr-6')).addClass('sqr-6-animation');
+          $(document.querySelector('#img-sqr-7')).addClass('sqr-7-animation');
           $('#red-panda-img').delay(22220).show(100);
           $('#grizzly-bear-img').delay(22420).show(100);
           $('#wild-turkey-img').delay(22620).show(100);
+          $('#north-american-porcupine-img').delay(22820).show(100);
+          $('#mallard-img').delay(23020).show(100);
+          $('#barred-owl-img').delay(23220).show(100);
+          $('#peacock-img').delay(23420).show(100);
         });
       })
     </script>
@@ -118,6 +126,48 @@ cladogram :
       @-webkit-keyframes move-to-column3 {
         0% { left: 627px; top: 271px;}
         100% { left: 468px; top: 293px; }
+      }
+      
+      
+      #img-sqr-4.sqr-4-animation {
+        -webkit-animation-delay: 16020ms, 16020ms, 16020ms, 20020ms, 20620ms, 23020ms;
+        -webkit-animation-name: fade-in, move-to-column4, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column4 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 657px; top: 293px; }
+      }
+      #img-sqr-5.sqr-5-animation {
+        -webkit-animation-delay: 16220ms, 16220ms, 16220ms, 20220ms, 20820ms, 23220ms;
+        -webkit-animation-name: fade-in, move-to-column5, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column5 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 846px; top: 293px; }
+      }
+      #img-sqr-6.sqr-6-animation {
+        -webkit-animation-delay: 16420ms, 16420ms, 16420ms, 20420ms, 21020ms, 23420ms;
+        -webkit-animation-name: fade-in, move-to-column6, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column6 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 1035px; top: 293px; }
+      }
+      #img-sqr-7.sqr-7-animation {
+        -webkit-animation-delay: 16620ms, 16620ms, 16620ms, 20620ms, 21220ms, 23620ms;
+        -webkit-animation-name: fade-in, move-to-column7, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column7 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 1224px; top: 293px; }
       }
 
       @-webkit-keyframes spinning {
@@ -220,16 +270,16 @@ cladogram :
     <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" id="wild-turkey-img" style="
       left: 445px;
     ">
-    <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" id="north-american-porcupine-img" style="
       left: 634px;
     ">
-    <img src="/TemperateForest/images/animals/mallard.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/mallard.jpg" class="cladogram-images" id="mallard-img" style="
       left: 823px;
     ">
-    <img src="/TemperateForest/images/animals/barred_owl.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/barred_owl.jpg" class="cladogram-images" id="barred-owl-img" style="
       left: 1012px;
     ">
-    <img src="/TemperateForest/images/animals/peacock.jpg" class="cladogram-images" style="
+    <img src="/TemperateForest/images/animals/peacock.jpg" class="cladogram-images" id="peacock-img" style="
       left: 1201px;
     ">
     
@@ -266,6 +316,10 @@ cladogram :
     <div class="img-sqr" id="img-sqr-1"></div>
     <div class="img-sqr" id="img-sqr-2"></div>
     <div class="img-sqr" id="img-sqr-3"></div>
+    <div class="img-sqr" id="img-sqr-4"></div>
+    <div class="img-sqr" id="img-sqr-5"></div>
+    <div class="img-sqr" id="img-sqr-6"></div>
+    <div class="img-sqr" id="img-sqr-7"></div>
 
   </body>
 </html>
