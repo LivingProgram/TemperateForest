@@ -124,6 +124,14 @@ cladogram :
           $(document.querySelector('#img-sqr-5')).addClass('sqr-5-animation');
           $(document.querySelector('#img-sqr-6')).addClass('sqr-6-animation');
           $(document.querySelector('#img-sqr-7')).addClass('sqr-7-animation');
+
+          $(document.querySelector('#red-panda-img')).addClass('img-animation');
+          $(document.querySelector('#grizzly-bear-img')).addClass('img-animation');
+          $(document.querySelector('#wild-turkey-img')).addClass('img-animation');
+          $(document.querySelector('#north-american-porcupine-img')).addClass('img-animation');
+          $(document.querySelector('#mallard-img')).addClass('img-animation');
+          $(document.querySelector('#barred-owl-img')).addClass('img-animation');
+          $(document.querySelector('#peacock-img')).addClass('img-animation');
           $('#red-panda-img').delay(22220).show(100);
           $('#grizzly-bear-img').delay(22420).show(100);
           $('#wild-turkey-img').delay(22620).show(100);
@@ -192,6 +200,15 @@ cladogram :
       })
     </script>
     <style>
+      .img-animation {
+        -webkit-animation: 8s 22220s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
       #img-sqr-1.sqr-1-animation {
         -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 19420ms, 20020ms, 22420ms;
         -webkit-animation-name: fade-in, move-to-column1, spinning, bounce, grow, explode2;
