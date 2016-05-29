@@ -37,6 +37,18 @@ cladogram :
       position: absolute
       top: 0
       left: 0
+    .navigation > a :
+      color: '#FFFFFF'
+      float: left
+      font-size: 20px
+      padding-left: 50px
+      padding-top: 20px
+      padding-right: 50px
+    .navigation > h1 :
+      color: '#FFFFFF'
+      float: left
+      padding-left: 200px
+      padding-right: 50px
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -131,7 +143,7 @@ cladogram :
           $('#north-american-porcupine-img').delay(22820).show(100);
           $('#mallard-img').delay(23020).show(100);
           $('#barred-owl-img').delay(23220).show(100);
-          $('#peacock-img').delay(23420).show(100);
+          $('#peacock-img').delay(23420).show(100); 
           
           setTimeout(fullSketch, 2500);
           
@@ -189,6 +201,7 @@ cladogram :
             showCursor: false,
             startDelay: 29000,
           });
+          $('#Again!!').delay(31000).show(100);
         });
       })
     </script>
@@ -400,6 +413,12 @@ cladogram :
   <body>
 
     {% include nav.html %}
+
+    <div class="navigation">
+      <a href="http://livingprogram.github.io/TemperateForest/diagrams/main_menu/">&lt;- Main Menu</a>
+      <a id="Again!!" href="http://livingprogram.github.io/TemperateForest/diagrams/cladogram/" style="display:none;">Again!!</a>
+      <h1>Cladogram</h1>
+    </div>
 
     <div style="font-size: 20px;position: absolute;top: 450px;left: 680px;">
       <div id="egg-strings" style="display: none;">
