@@ -4,6 +4,8 @@
         href : /TemperateForest/
       - name : Animals
         href : /TemperateForest/animals/
+      - name : Diagrams
+        href : /TemperateForest/diagrams/
       - name : Contact
         href : /TemperateForest/contact/
     center : 'Page made by LivingProgram. Powered by Github and Jekyll.'
