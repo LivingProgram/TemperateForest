@@ -55,6 +55,33 @@ trophiclevel :
       $(document).ready(function() {
         
         $(document).click(function() {
+          $("#tertiary").typed({
+            stringsElement: $('#tertiary-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+          });
+          $(document).click(function() {
+          $("#secondary").typed({
+            stringsElement: $('#secondary-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+          });
+          $(document).click(function() {
+          $("#primary").typed({
+            stringsElement: $('#primary-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+          });
+        $(document).click(function() {
           $("#producers").typed({
             stringsElement: $('#producers-strings'),
             typeSpeed: 50,
@@ -125,6 +152,24 @@ trophiclevel :
       </div>
     </nav>
 
+    <div style="font-size: 31px;position: absolute;top: 1000px;left: 978px;">
+      <div id="tertiary-strings" style="display: none;">
+        <p><strong style="color: white;">0.1%</strong> - Tertiary Consumers</p>
+      </div>
+      <span id="tertiary" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 31px;position: absolute;top: 1000px;left: 978px;">
+      <div id="secondary-strings" style="display: none;">
+        <p><strong style="color: white;">1%</strong> - Secondary Consumers</p>
+      </div>
+      <span id="secondary" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 31px;position: absolute;top: 1000px;left: 978px;">
+      <div id="primary-strings" style="display: none;">
+        <p><strong style="color: white;">10%</strong> - Primary Consumers</p>
+      </div>
+      <span id="primary" style="white-space:pre; line-height: 0px;"></span>
+    </div>
     <div style="font-size: 31px;position: absolute;top: 1000px;left: 978px;">
       <div id="producers-strings" style="display: none;">
         <p><strong style="color: white;">100%</strong> - Primary Producers</p>
