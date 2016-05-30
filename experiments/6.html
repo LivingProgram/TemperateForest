@@ -18,8 +18,18 @@ trophiclevel :
       position: absolute
       width: 105px
       height: 100px
+      display: none
     .featured-images:hover :
       border: '8px solid #FFFFFF'
+    .go-text :
+      position: absolute
+      top: 271px
+      left: 505px
+    .go-text > h1:
+      color: '#00FF8D'
+      font-size: 60px
+      line-height: 79px
+      margin-top: 5%
 
 
 ---
@@ -55,6 +65,9 @@ trophiclevel :
       $(document).ready(function() {
         
         $(document).click(function() {
+          
+          $('.go-text').delay(0).fadeOut(500);
+          
           $("#tertiary").typed({
             stringsElement: $('#tertiary-strings'),
             typeSpeed: 50,
@@ -91,7 +104,41 @@ trophiclevel :
         });
       })
     </script>
-
+    <style>
+        .go-text {
+            opacity: 1;
+            -webkit-animation: blink 1.5s infinite;
+            -moz-animation: blink 1.5s infinite;
+            -ms-animation: blink 1.5s infinite;
+            -o-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
   </head>
   <body>
 
@@ -148,6 +195,10 @@ trophiclevel :
         </div>
       </div>
     </nav>
+
+    <div class="go-text">
+      <h1>Click to Start</h1>
+    </div>
 
     <div style="font-size: 31px;position: absolute;top: 194px;left: 700px;">
       <div id="tertiary-strings" style="display: none;">
