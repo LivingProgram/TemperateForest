@@ -1,0 +1,113 @@
+---
+title : TemperateForest FoodWeb
+foodweb :
+  css :
+    .navigation > a :
+      color: '#FFFFFF'
+      float: left
+      font-size: 20px
+      padding-left: 50px
+      padding-top: 20px
+      padding-right: 50px
+    .navigation > h1 :
+      color: '#FFFFFF'
+      float: left
+      padding-left: 200px
+      padding-right: 50px
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include green_nav.css %}
+      {% for selector in page.foodweb.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+    <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+
+        $(document).click(function() {
+
+        });
+      })
+    </script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+      <div class="navigation">
+        <a href="http://livingprogram.github.io/TemperateForest/diagrams/main_menu/">&lt;- Main Menu</a>
+        <a id="Again" href="http://livingprogram.github.io/TemperateForest/diagrams/food_web/" style="display:none;">Again!!</a>
+        <h1>Food Web</h1>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Home</a></li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/animals" class="dropdown-toggle special-hover">Animals <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/animals/red_panda">Red Panda</a></li>
+                      <li><a href="/TemperateForest/animals/grizzly_bear">Grizzly Bear</a></li>
+                      <li><a href="/TemperateForest/animals/wild_turkey">Wild Turkey</a></li>
+                      <li><a href="/TemperateForest/animals/north_american_porcupine">North American Porcupine</a></li>
+                      <li><a href="/TemperateForest/animals/mallard">Mallard</a></li>
+                      <li><a href="/TemperateForest/animals/barred_owl">Barred Owl</a></li>
+                      <li><a href="/TemperateForest/animals/indian_peafowl">Indian Peafowl</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/diagrams" class="dropdown-toggle special-hover">Diagrams <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/diagrams">Introduction</a></li>
+                      <li><a href="/TemperateForest/diagrams/main_menu">Main Menu</a></li>
+                      <li><a href="/TemperateForest/diagrams/cladogram">Cladogram</a></li>
+                      <li><a href="/TemperateForest/diagrams/food_web">Food Web</a></li>
+                      <li><a href="/TemperateForest/diagrams/trophic_level">Trophic Level</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class=""><a href="/TemperateForest/contact" class="special-hover">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </body>
+</html>
