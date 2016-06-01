@@ -68,9 +68,6 @@ trophiclevel :
           
           $('.go-text').delay(0).fadeOut(500);
           
-          $('#pencil').delay(0).show(2000);
-          $(document.querySelector('#pencil')).addClass('illustrate');
-          
           $("#tertiary").typed({
             stringsElement: $('#tertiary-strings'),
             typeSpeed: 50,
@@ -107,16 +104,6 @@ trophiclevel :
         });
       })
     </script>
-    <style>
-      .illustrate {
-        -webkit-animation: 3s 2.1s move-to-start;
-        -webkit-animation-fill-mode: forwards;
-      }
-      @-webkit-keyframes move-to-start {
-        0% { left: 530px; top: 180px;}
-        100% { left: 496px; top: -183px; }
-      }
-    </style>
     <style>
         .go-text {
             opacity: 1;
@@ -267,8 +254,6 @@ trophiclevel :
     <div class="trophic-images" style="left: 382px;background-image: url(&quot;/TemperateForest/images/animals/trophic_digram/maple_tree.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 1058px;"></div>
     <div class="trophic-images" style="left: 537px;background-image: url(&quot;/TemperateForest/images/animals/trophic_digram/oak_tree.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 1058px;"></div>
     <div class="trophic-images" style="left: 757px;background-image: url(&quot;/TemperateForest/images/animals/trophic_digram/sweet_gum_tree.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 1058px;"></div>
-
-    <img id="pencil" src="/TemperateForest/images/neon_pencil2.png" style="position: absolute;top: 180px;left: 530px;display: none;">
 
   </body>
 </html>
