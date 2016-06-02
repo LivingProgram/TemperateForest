@@ -39,18 +39,19 @@ title : TemperateForest Wild Turkey
         ">Wild Turkey</h2>
     </div>
 
-    <div class="container explanations">
-      <h1>Linnean Classification</h1>
-      <p> {{ site.data.profiles.wild_turkey.content.classification.main }} <i>{{ site.data.profiles.wild_turkey.content.classification.italics }}</i></p>
-      {% for line in site.data.profiles.wild_turkey.content.other %}	
-        {% for item in line %}
-        <h1>{{ item[0] }}</h1>
-        <p>{{ item[1] }}</p>
+    <div class="content">
+      <img src="/TemperateForest/images/ProfilePics/wild_turkey.JPG" style="width: 40vw;float: left;">
+      <div class="explanations">
+        <h1>Linnean Classification</h1>
+        <p> {{ site.data.profiles.wild_turkey.content.classification.main }} <i>{{ site.data.profiles.wild_turkey.content.classification.italics }}</i></p>
+        {% for line in site.data.profiles.wild_turkey.content.other %}	
+          {% for item in line %}
+          <h1>{{ item[0] }}</h1>
+          <p>{{ item[1] }}</p>
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
+      </div>
     </div>
-
-    <img src="/TemperateForest/images/ProfilePics/wild_turkey.jpg" style="width: 100vw;">
 
     {% include footer.html %}
 
