@@ -162,6 +162,15 @@ trophiclevel :
       })
     </script>
     <style>
+      .trophic-images {
+        -webkit-animation: 2s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
         .go-text {
             opacity: 1;
             -webkit-animation: blink 1.5s infinite;
