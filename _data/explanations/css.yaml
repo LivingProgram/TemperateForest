@@ -1,15 +1,11 @@
 .explanations :
-  padding-left: 15vw
-  padding-right: 15vw
-  padding-top: 40px
-  margin-bottom: 60px
+  padding-left: 42vw
 .explanations > h1 :
   font-weight: 800
-  font-size: 60px
+  font-size: 21px
   margin-top: 0px
-  margin-bottom: 22px
-  line-height: 65px
+  margin-bottom: 3px
 .explanations > p :
-  font-size: 26px
-  margin-bottom: 0px
-  line-height: 33px
+  font-size: 18px
+  margin-bottom: 6px
+  line-height: 22px
