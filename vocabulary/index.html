@@ -1,5 +1,12 @@
 ---
 title : TemperateForest Vocabulary
+vocabulary:
+  css :
+    '#vocabulary > p' :
+      color: white
+      font-size: 19px
+    '#vocabulary > strong' :
+      font-size: 20px
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -7,6 +14,13 @@ title : TemperateForest Vocabulary
     {% include resources.html %}
     <style>
       {% include animals_nav.css %}
+      {% for selector in page.vocabulary.css %}
+        {{ selector[0] }} {
+         {% for css in selector[1] %}
+           {{ css[0] }} : {{ css[1] }}; 
+         {% endfor %}
+        }
+      {% endfor %}
       {% include footer.css %}
     </style>
     <script>
@@ -40,7 +54,6 @@ title : TemperateForest Vocabulary
         {% endfor %}
       </div>
     </div>
-    
 
     {% include footer.html %}
 
