@@ -53,9 +53,10 @@ vocabulary:
         {% for line in site.data.vocabulary.content %}	
           {% for item in line %}<p><strong>{{ item[0] }}:</strong> {{ item[1] }}</p>{% endfor %}
         {% endfor %}
+        <p style="margin-bottom: 0px;height: 100px;"></p>
       </div>
     </div>
-
+   
     {% include footer.html %}
 
   </body>
