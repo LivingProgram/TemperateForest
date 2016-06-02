@@ -36,7 +36,7 @@ title : TemperateForest Vocabulary
         ">Vocabulary</h2>
       <div id="vocabulary">
         {% for selector in site.data.vocabulary.content %}	
-          <p><strong>{{ selector[0] }}:</strong> {% for item in selector %}{{ item[0] }}{% endfor %}</p>
+          <p><strong>{{ selector[0] }}:</strong> {% for item in selector[1] %}{{ item[0] }}{% endfor %}</p>
         {% endfor %}
       </div>
     </div>
