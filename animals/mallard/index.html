@@ -39,18 +39,19 @@ title : TemperateForest Mallard
         ">Mallard</h2>
     </div>
 
-    <div class="container explanations">
-      <h1>Linnean Classification</h1>
-      <p> {{ site.data.profiles.mallard.content.classification.main }} <i>{{ site.data.profiles.mallard.content.classification.italics }}</i></p>
-      {% for line in site.data.profiles.mallard.content.other %}	
-        {% for item in line %}
-        <h1>{{ item[0] }}</h1>
-        <p>{{ item[1] }}</p>
+    <div class="content">
+      <img src="/TemperateForest/images/ProfilePics/mallard.JPG" style="width: 40vw;float: left;">
+      <div class="explanations">
+        <h1>Linnean Classification</h1>
+        <p> {{ site.data.profiles.mallard.content.classification.main }} <i>{{ site.data.profiles.mallard.content.classification.italics }}</i></p>
+        {% for line in site.data.profiles.mallard.content.other %}	
+          {% for item in line %}
+          <h1>{{ item[0] }}</h1>
+          <p>{{ item[1] }}</p>
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
+      </div>
     </div>
-
-    <img src="/TemperateForest/images/ProfilePics/mallard.JPG" style="width: 100vw;">
 
     {% include footer.html %}
 
