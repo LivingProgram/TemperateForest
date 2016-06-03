@@ -7,6 +7,52 @@ cladogram :
       top: 65px
       width: 94px
       height: 88px
+      display: none
+    .img-sqr :
+      background-color: '#00FF8D'
+      width: 47px
+      height: 44px
+      position: absolute
+      left: 627px
+      top: 271px
+      opacity: 0
+    .go-sqr:
+      background-color: '#000000'
+      width: 94px
+      height: 88px
+      position: absolute
+      left: 627px
+      top: 271px
+      text-align: center
+    .go-text :
+      position: absolute
+      top: 271px
+      left: 505px
+    .go-text > h1:
+      color: '#00FF8D'
+      font-size: 60px
+      line-height: 79px
+      margin-top: 5%
+    .go-border :
+      position: absolute
+      top: 0
+      left: 0
+    .navigation > a :
+      color: '#FFFFFF'
+      float: left
+      font-size: 20px
+      padding-left: 50px
+      padding-top: 20px
+      padding-right: 50px
+    .navigation > h1 :
+      color: '#FFFFFF'
+      float: left
+      padding-left: 64px
+    .label :
+      position: absolute
+      color: '#00FF8D'
+      font-size: 15px
+      display: none
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -35,9 +81,16 @@ cladogram :
         });
       });
     </script>
+    <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
     <script>
-    (function() {
-    
+      $(document).ready(function() {
+        var goBorder = document.querySelector('.go-border path');
+        var length = goBorder.getTotalLength();
+  
+        goBorder.style.transition = goBorder.style.WebkitTransition = 'none';
+        goBorder.style.strokeDasharray = length + ' ' + length;
+        goBorder.style.strokeDashoffset = length;
+
       function toArray(arr) {
         return Array.prototype.slice.call(arr);
       }
@@ -67,39 +120,411 @@ cladogram :
         paths.forEach(function(path, i) {
           path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + begin + 's ease-in-out';
           path.style.strokeDashoffset = '0';
-          begin += durations[i] + 0.1;
+          begin += durations[i] - 0.1;
         });
       }
-    
-      window.addEventListener('load', fullSketch);
-    }());
+
+        $(document).click(function() {
+          goBorder.getBoundingClientRect();
+          goBorder.style.transition = goBorder.style.WebkitTransition = 'stroke-dashoffset 4s ease-in-out';
+          goBorder.style.strokeDashoffset = '0';
+          
+          $(document.querySelector('.go-sqr')).addClass('fill');
+          $('.go-text').delay(0).fadeOut(500);
+          $('.go-border').delay(3900).fadeOut(1000);
+          
+          $(document.querySelector('#img-sqr-1')).addClass('sqr-1-animation');
+          $(document.querySelector('#img-sqr-2')).addClass('sqr-2-animation');
+          $(document.querySelector('#img-sqr-3')).addClass('sqr-3-animation');
+          $(document.querySelector('#img-sqr-4')).addClass('sqr-4-animation');
+          $(document.querySelector('#img-sqr-5')).addClass('sqr-5-animation');
+          $(document.querySelector('#img-sqr-6')).addClass('sqr-6-animation');
+          $(document.querySelector('#img-sqr-7')).addClass('sqr-7-animation');
+
+          $('#red-panda-img').delay(22220).show(100);
+          $('#grizzly-bear-img').delay(22420).show(100);
+          $('#wild-turkey-img').delay(22620).show(100);
+          $('#north-american-porcupine-img').delay(22820).show(100);
+          $('#mallard-img').delay(23020).show(100);
+          $('#barred-owl-img').delay(23220).show(100);
+          $('#peacock-img').delay(23420).show(100); 
+          
+          setTimeout(fullSketch, 2500);
+          
+          $("#egg").typed({
+            stringsElement: $('#egg-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 25000,
+          });
+          $("#talons").typed({
+            stringsElement: $('#talons-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 28000,
+          });
+          $("#eyes").typed({
+            stringsElement: $('#eyes-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 30000,
+          });
+          $("#claws").typed({
+            stringsElement: $('#claws-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 26000,
+          });
+          $("#quills").typed({
+            stringsElement: $('#quills-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 27000,
+          });
+          $("#wattle").typed({
+            stringsElement: $('#wattle-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+            startDelay: 29000,
+          });
+          $('#Again').delay(31000).show(100);
+          $('.label').delay(31000).show(1000);
+        });
+      })
     </script>
+    <style>
+      .cladogram-images {
+        -webkit-animation: 2s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
+      #img-sqr-1.sqr-1-animation {
+        -webkit-animation-delay: 15420ms, 15420ms, 15420ms, 19420ms, 20020ms, 22420ms;
+        -webkit-animation-name: fade-in, move-to-column1, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column1 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 90px; top: 293px; }
+      }
+      #img-sqr-2.sqr-2-animation {
+        -webkit-animation-delay: 15620ms, 15620ms, 15620ms, 19620ms, 20220ms, 22620ms;
+        -webkit-animation-name: fade-in, move-to-column2, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column2 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 279px; top: 293px; }
+      }
+      #img-sqr-3.sqr-3-animation {
+        -webkit-animation-delay: 15820ms, 15820ms, 15820ms, 19820ms, 20420ms, 22820ms;
+        -webkit-animation-name: fade-in, move-to-column3, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column3 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 468px; top: 293px; }
+      }
+      
+      
+      #img-sqr-4.sqr-4-animation {
+        -webkit-animation-delay: 16020ms, 16020ms, 16020ms, 20020ms, 20620ms, 23020ms;
+        -webkit-animation-name: fade-in, move-to-column4, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column4 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 657px; top: 293px; }
+      }
+      #img-sqr-5.sqr-5-animation {
+        -webkit-animation-delay: 16220ms, 16220ms, 16220ms, 20220ms, 20820ms, 23220ms;
+        -webkit-animation-name: fade-in, move-to-column5, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column5 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 846px; top: 293px; }
+      }
+      #img-sqr-6.sqr-6-animation {
+        -webkit-animation-delay: 16420ms, 16420ms, 16420ms, 20420ms, 21020ms, 23420ms;
+        -webkit-animation-name: fade-in, move-to-column6, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column6 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 1035px; top: 293px; }
+      }
+      #img-sqr-7.sqr-7-animation {
+        -webkit-animation-delay: 16620ms, 16620ms, 16620ms, 20620ms, 21220ms, 23620ms;
+        -webkit-animation-name: fade-in, move-to-column7, spinning, bounce, grow, explode2;
+        -webkit-animation-duration: 1ms, 80ms, 4s, 3s, 600ms, 400ms;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes move-to-column7 {
+        0% { left: 627px; top: 271px;}
+        100% { left: 1224px; top: 293px; }
+      }
+
+      @-webkit-keyframes spinning {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(4680deg); }
+      }
+      @-webkit-keyframes bounce {
+        0% { top: 293px;}
+        20% { top: 590px; }
+        40% { top: 422px; }
+        60% { top: 564px; }
+        100% { top: 87px; }
+      }
+      @-webkit-keyframes grow {
+        0% { -webkit-transform: scale(1); }
+        100% { -webkit-transform: scale(2); }
+      }
+      @-webkit-keyframes explode2 {
+        0% { -webkit-transform: scale(2); background-color: #00FF8D; opacity: 1;}
+        50% { -webkit-transform: scale(3); background-color: #99ffd1; opacity: 1;}
+        100% { -webkit-transform: scale(2); background-color: #FFFFFF; opacity: 0;}
+      }
+    </style>
+    <style>
+      .go-sqr.fill {
+        -webkit-animation-delay: 3900ms, 6900ms, 10000ms, 10000ms, 10000ms, 15000ms, 15400ms, 15500ms, 15500ms;
+        -webkit-animation-name: green-fill, fade-out, fade-in, change-color, button-bounce, rotate, explode, normal-color, fade-out;
+        -webkit-animation-duration: 3s, 3s, 2s, 6s, 6s, 1s, 100ms, 1ms, 2s;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes green-fill {
+        from { background-color: #000000; }
+        to { background-color: #00FF8D; }
+      }
+      @-webkit-keyframes fade-out {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+      @-webkit-keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @-webkit-keyframes change-color {
+        0% { background-color: #00FF8D; }
+        17% { background-color: #00ffff; }
+        33% { background-color: #ff66ff; }
+        50% { background-color: #ff6699; }
+        67% { background-color: #ffcc66; }
+        83% { background-color: #ffff4d; }
+        100% { background-color: #99ffd1; }
+      }
+      @-webkit-keyframes button-bounce {
+        0% { -webkit-transform: scale(.2); }
+        5% { -webkit-transform: scale(.1); }
+        10% { -webkit-transform: scale(.3); }
+        15% { -webkit-transform: scale(.2); }
+        20% { -webkit-transform: scale(.4); }
+        25% { -webkit-transform: scale(.3); }
+        30% { -webkit-transform: scale(.5); }
+        35% { -webkit-transform: scale(.4); }
+        40% { -webkit-transform: scale(.6); }
+        45% { -webkit-transform: scale(.4); }
+        50% { -webkit-transform: scale(.7); }
+        55% { -webkit-transform: scale(.5); }
+        60% { -webkit-transform: scale(.9); }
+        65% { -webkit-transform: scale(.6); }
+        70% { -webkit-transform: scale(1.3); }
+        75% { -webkit-transform: scale(.8); }
+        80% { -webkit-transform: scale(1.4); }
+        85% { -webkit-transform: scale(.8); }
+        90% { -webkit-transform: scale(1.5); }
+        95% { -webkit-transform: scale(.8); }
+        100% { -webkit-transform: scale(3); }
+      }
+      @-webkit-keyframes rotate {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      @-webkit-keyframes explode {
+        0% { -webkit-transform: scale(1.5); }
+        50% { -webkit-transform: scale(2); }
+        100% { -webkit-transform: scale(.5); }
+      }
+      @-webkit-keyframes normal-color {
+        0% { background-color: #99ffd1; }
+        100% { background-color: #00FF8D; }
+      }
+    </style>
+    <style>
+        .go-text {
+            opacity: 1;
+            -webkit-animation: blink 1.5s infinite;
+            -moz-animation: blink 1.5s infinite;
+            -ms-animation: blink 1.5s infinite;
+            -o-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
   </head>
   <body>
 
-    {% include nav.html %}
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+      <div class="navigation">
+        <a href="http://livingprogram.github.io/TemperateForest/diagrams/main_menu/">&lt;- Main Menu</a>
+        <a id="Again" href="http://livingprogram.github.io/TemperateForest/diagrams/cladogram/" style="display:none;">Again!!</a>
+        <h1>Cladogram</h1>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Home</a></li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/animals" class="dropdown-toggle special-hover">Animals <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/animals">Main Menu</a></li>
+                      <li><a href="/TemperateForest/animals/red_panda">Red Panda</a></li>
+                      <li><a href="/TemperateForest/animals/grizzly_bear">Grizzly Bear</a></li>
+                      <li><a href="/TemperateForest/animals/wild_turkey">Wild Turkey</a></li>
+                      <li><a href="/TemperateForest/animals/north_american_porcupine">North American Porcupine</a></li>
+                      <li><a href="/TemperateForest/animals/mallard">Mallard</a></li>
+                      <li><a href="/TemperateForest/animals/barred_owl">Barred Owl</a></li>
+                      <li><a href="/TemperateForest/animals/indian_peafowl">Indian Peafowl</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/diagrams" class="dropdown-toggle special-hover">Diagrams <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/diagrams">Introduction</a></li>
+                      <li><a href="/TemperateForest/diagrams/main_menu">Main Menu</a></li>
+                      <li><a href="/TemperateForest/diagrams/cladogram">Cladogram</a></li>
+                      <li><a href="/TemperateForest/diagrams/food_web">Food Web</a></li>
+                      <li><a href="/TemperateForest/diagrams/trophic_level">Trophic Level</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class=""><a href="/TemperateForest/vocabulary" class="special-hover">Vocabulary</a></li>
+            <li class=""><a href="/TemperateForest/contact" class="special-hover">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <img src="/TemperateForest/images/animals/red_panda.jpg" class="cladogram-images" style="
-      left: 67px;
-    ">
-    <img src="/TemperateForest/images/animals/grizzly_bear.jpg" class="cladogram-images" style="
-      left: 256px;
-    ">
-    <img src="/TemperateForest/images/animals/wild_turkey.jpg" class="cladogram-images" style="
-      left: 445px;
-    ">
-    <img src="/TemperateForest/images/animals/north_american_porcupine.jpg" class="cladogram-images" style="
-      left: 634px;
-    ">
-    <img src="/TemperateForest/images/animals/mallard.jpg" class="cladogram-images" style="
-      left: 823px;
-    ">
-    <img src="/TemperateForest/images/animals/barred_owl.jpg" class="cladogram-images" style="
-      left: 1012px;
-    ">
-    <img src="/TemperateForest/images/animals/peacock.jpg" class="cladogram-images" style="
-      left: 1201px;
-    ">
+    <div style="font-size: 20px;position: absolute;top: 450px;left: 680px;">
+      <div id="egg-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Amniotic Egg</p>
+      </div>
+      <span id="egg" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 333px;left: 900px;">
+      <div id="talons-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Sharp Talons</p>
+      </div>
+      <span id="talons" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 219px;left: 1119px;">
+      <div id="eyes-strings" style="display: none; line-height: 0px;">
+        <p><strong style="font-size: 71px;">\</strong>Forward Facing Eyes</p>
+      </div>
+      <span id="eyes" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 198px;left: 254px;">
+      <div id="claws-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Semiretractable <br>    Claws</p>
+      </div>
+      <span id="claws" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 211px;left: 432px;">
+      <div id="quills-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Sharp Quills</p>
+      </div>
+      <span id="quills" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 188px;left: 983px;">
+      <div id="wattle-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Wattle</p>
+      </div>
+      <span id="wattle" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+
+    <div class="img-sqr" id="img-sqr-1"></div>
+    <div class="img-sqr" id="img-sqr-2"></div>
+    <div class="img-sqr" id="img-sqr-3"></div>
+    <div class="img-sqr" id="img-sqr-4"></div>
+    <div class="img-sqr" id="img-sqr-5"></div>
+    <div class="img-sqr" id="img-sqr-6"></div>
+    <div class="img-sqr" id="img-sqr-7"></div>
+
+    <a href="/TemperateForest/animals/red_panda"><div class="cladogram-images" id="red-panda-img" style="left: 67px; background-image: url(&quot;/TemperateForest/images/animals/red_panda.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/grizzly_bear"><div class="cladogram-images" id="grizzly-bear-img" style="left: 256px; background-image: url(&quot;/TemperateForest/images/animals/grizzly_bear.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/wild_turkey"><div class="cladogram-images" id="wild-turkey-img" style="left: 445px; background-image: url(&quot;/TemperateForest/images/animals/wild_turkey.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/north_american_porcupine"><div class="cladogram-images" id="north-american-porcupine-img" style="left: 634px; background-image: url(&quot;/TemperateForest/images/animals/north_american_porcupine.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/mallard"><div class="cladogram-images" id="mallard-img" style="left: 823px; background-image: url(&quot;/TemperateForest/images/animals/mallard.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/barred_owl"><div class="cladogram-images" id="barred-owl-img" style="left: 1012px; background-image: url(&quot;/TemperateForest/images/animals/barred_owl.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/indian_peafowl"><div class="cladogram-images" id="peacock-img" style="left: 1201px; background-image: url(&quot;/TemperateForest/images/animals/peacock.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
     
     <div class="full-sketch-container">
       <svg viewBox="0 0 1366 625" height="625" width="1366" xmlns="http://www.w3.org/2000/svg">
@@ -122,6 +547,21 @@ cladogram :
       </svg>
     </div>
 
+    <div class="go-sqr">
+      <svg viewBox="0 0 94 88" height="88px" class="go-border" width="94px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 0 L 94 0 L 94 88 L 0 88 z" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+      </svg>
+    </div>
+    <div class="go-text">
+      <h1>Click to Start</h1>
+    </div>
+
+    <p class="label" style="left: 39px;top: 163px;">Red Panda</p>
+    <p class="label" style="left: 284px;top: 163px;">Grizzly Bear</p>
+    <p class="label" style="left: 480px;top: 163px;">Wild Turkey</p>
+    <p class="label" style="left: 614px;top: 163px;">North<br>American<br>Porcupine</p>
+    <p class="label" style="left: 800px;top: 163px;">Mallard</p>
+    <p class="label" style="left: 1034px;top: 163px;">Barred Owl</p>
+    <p class="label" style="left: 1229px;top: 163px;">Indian Peafowl</p>
   </body>
 </html>
-
