@@ -1,11 +1,11 @@
   items :		
     left :		
       - name : Home
-        href : /TemperateForest/
+        href : https://livingprogram.github.io/TemperateForest/
       - name : Animals
-        href : /TemperateForest/animals/
+        href : http://livingprogram.github.io/TemperateForest/animals/
       - name : Diagrams
-        href : /TemperateForest/diagrams/
+        href : http://livingprogram.github.io/TemperateForest/diagrams/
       - name : Contact
-        href : /TemperateForest/contact/
+        href : http://livingprogram.github.io/TemperateForest/contact/
     center : 'Page made by LivingProgram. Powered by Github and Jekyll.'
