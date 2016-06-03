@@ -1,1 +1,290 @@
+---
+title : TemperateForest Cladogram
+cladogram :
+  css :
+    .cladogram-images :
+      position: absolute
+      top: 65px
+      width: 94px
+      height: 88px
+      display: none
+    .img-sqr :
+      background-color: '#00FF8D'
+      width: 47px
+      height: 44px
+      position: absolute
+      left: 627px
+      top: 271px
+      opacity: 0
+    .go-sqr:
+      background-color: '#000000'
+      width: 94px
+      height: 88px
+      position: absolute
+      left: 627px
+      top: 271px
+      text-align: center
+    .go-text :
+      position: absolute
+      top: 271px
+      left: 505px
+    .go-text > h1:
+      color: '#00FF8D'
+      font-size: 60px
+      line-height: 79px
+      margin-top: 5%
+    .go-border :
+      position: absolute
+      top: 0
+      left: 0
+    .navigation > a :
+      color: '#FFFFFF'
+      float: left
+      font-size: 20px
+      padding-left: 50px
+      padding-top: 20px
+      padding-right: 50px
+    .navigation > h1 :
+      color: '#FFFFFF'
+      float: left
+      padding-left: 64px
+    .label :
+      position: absolute
+      color: '#00FF8D'
+      font-size: 15px
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include green_nav.css %}
+      {% for selector in page.cladogram.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+    <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+
+        $(document).click(function() {
+          $('#red-panda-img').delay(0).show(100);
+          $('#grizzly-bear-img').delay(0).show(100);
+          $('#wild-turkey-img').delay(0).show(100);
+          $('#north-american-porcupine-img').delay(0).show(100);
+          $('#mallard-img').delay(0).show(100);
+          $('#barred-owl-img').delay(0).show(100);
+          $('#peacock-img').delay(0).show(100); 
+          
+          
+          $("#egg").typed({
+            stringsElement: $('#egg-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+
+          });
+          $("#talons").typed({
+            stringsElement: $('#talons-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+
+          });
+          $("#eyes").typed({
+            stringsElement: $('#eyes-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+
+          });
+          $("#claws").typed({
+            stringsElement: $('#claws-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+
+          });
+          $("#quills").typed({
+            stringsElement: $('#quills-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+
+          });
+          $("#wattle").typed({
+            stringsElement: $('#wattle-strings'),
+            typeSpeed: 50,
+            loop: false,
+            contentType: 'html',
+            loopCount: false,
+            showCursor: false,
+          });
+          
+          $('.label').delay(0).show(1000);
+        });
+      })
+    </script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+      <div class="navigation">
+        <a href="http://livingprogram.github.io/TemperateForest/diagrams/main_menu/">&lt;- Main Menu</a>
+        <a id="Again" href="http://livingprogram.github.io/TemperateForest/diagrams/cladogram/" style="display:none;">Again!!</a>
+        <h1>Cladogram</h1>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Home</a></li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/animals" class="dropdown-toggle special-hover">Animals <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/animals">Main Menu</a></li>
+                      <li><a href="/TemperateForest/animals/red_panda">Red Panda</a></li>
+                      <li><a href="/TemperateForest/animals/grizzly_bear">Grizzly Bear</a></li>
+                      <li><a href="/TemperateForest/animals/wild_turkey">Wild Turkey</a></li>
+                      <li><a href="/TemperateForest/animals/north_american_porcupine">North American Porcupine</a></li>
+                      <li><a href="/TemperateForest/animals/mallard">Mallard</a></li>
+                      <li><a href="/TemperateForest/animals/barred_owl">Barred Owl</a></li>
+                      <li><a href="/TemperateForest/animals/indian_peafowl">Indian Peafowl</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/diagrams" class="dropdown-toggle special-hover">Diagrams <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/diagrams">Introduction</a></li>
+                      <li><a href="/TemperateForest/diagrams/main_menu">Main Menu</a></li>
+                      <li><a href="/TemperateForest/diagrams/cladogram">Cladogram</a></li>
+                      <li><a href="/TemperateForest/diagrams/food_web">Food Web</a></li>
+                      <li><a href="/TemperateForest/diagrams/trophic_level">Trophic Level</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class=""><a href="/TemperateForest/vocabulary" class="special-hover">Vocabulary</a></li>
+            <li class=""><a href="/TemperateForest/contact" class="special-hover">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="font-size: 20px;position: absolute;top: 450px;left: 680px;">
+      <div id="egg-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Amniotic Egg</p>
+      </div>
+      <span id="egg" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 333px;left: 900px;">
+      <div id="talons-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Sharp Talons</p>
+      </div>
+      <span id="talons" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 219px;left: 1119px;">
+      <div id="eyes-strings" style="display: none; line-height: 0px;">
+        <p><strong style="font-size: 71px;">\</strong>Forward Facing Eyes</p>
+      </div>
+      <span id="eyes" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 198px;left: 254px;">
+      <div id="claws-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Semiretractable <br>    Claws</p>
+      </div>
+      <span id="claws" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 211px;left: 432px;">
+      <div id="quills-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Sharp Quills</p>
+      </div>
+      <span id="quills" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+    <div style="font-size: 20px;position: absolute;top: 188px;left: 983px;">
+      <div id="wattle-strings" style="display: none;">
+        <p><strong style="font-size: 71px;">\</strong>Wattle</p>
+      </div>
+      <span id="wattle" style="white-space:pre; line-height: 0px;"></span>
+    </div>
+
+    <a href="/TemperateForest/animals/red_panda"><div class="cladogram-images" id="red-panda-img" style="left: 67px; background-image: url(&quot;/TemperateForest/images/animals/red_panda.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/grizzly_bear"><div class="cladogram-images" id="grizzly-bear-img" style="left: 256px; background-image: url(&quot;/TemperateForest/images/animals/grizzly_bear.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/wild_turkey"><div class="cladogram-images" id="wild-turkey-img" style="left: 445px; background-image: url(&quot;/TemperateForest/images/animals/wild_turkey.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/north_american_porcupine"><div class="cladogram-images" id="north-american-porcupine-img" style="left: 634px; background-image: url(&quot;/TemperateForest/images/animals/north_american_porcupine.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/mallard"><div class="cladogram-images" id="mallard-img" style="left: 823px; background-image: url(&quot;/TemperateForest/images/animals/mallard.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/barred_owl"><div class="cladogram-images" id="barred-owl-img" style="left: 1012px; background-image: url(&quot;/TemperateForest/images/animals/barred_owl.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    <a href="/TemperateForest/animals/indian_peafowl"><div class="cladogram-images" id="peacock-img" style="left: 1201px; background-image: url(&quot;/TemperateForest/images/animals/peacock.jpg&quot;); background-size: cover; background-repeat: no-repeat;"></div></a>
+    
+    <div class="full-sketch-container">
+      <svg viewBox="0 0 1366 625" height="625" width="1366" xmlns="http://www.w3.org/2000/svg">
+        <!--<path d="M 350 625 L 1250 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 350 625 L 575 507" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 575 507 L 800 389" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <!--<path d="M 575 507 L 114 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 575 507 L 345 329" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 345 329 L 230 240" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 345 329 L 492 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 230 240 L 114 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 230 240 L 303 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 800 389 L 1025 271" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 800 389 L 681 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 1025 271 L 1250 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <!--<path d="M 1025 271 L 870 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>-->
+        <path d="M 1025 271 L 948 211" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 948 211 L 870 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+        <path d="M 948 211 L 1059 150" stroke="#00FF8D" stroke-width="6" fill="none"></path>
+      </svg>
+    </div>
+
+    <p class="label" style="left: 39px;top: 163px;">Red Panda</p>
+    <p class="label" style="left: 284px;top: 163px;">Grizzly Bear</p>
+    <p class="label" style="left: 480px;top: 163px;">Wild Turkey</p>
+    <p class="label" style="left: 614px;top: 163px;">North<br>American<br>Porcupine</p>
+    <p class="label" style="left: 800px;top: 163px;">Mallard</p>
+    <p class="label" style="left: 1034px;top: 163px;">Barred Owl</p>
+    <p class="label" style="left: 1229px;top: 163px;">Indian Peafowl</p>
+  </body>
+</html>
 
