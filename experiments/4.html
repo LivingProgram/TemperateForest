@@ -17,6 +17,7 @@ foodweb :
       position: absolute
       width: 90px
       height: 90px
+      display: none
     .featured-images:hover :
       border: '8px solid #FFFFFF'
     .label :
@@ -24,6 +25,15 @@ foodweb :
       color: '#00FF8D'
       font-size: 15px
       display: none
+    .go-text :
+      position: absolute
+      top: 271px
+      left: 505px
+    .go-text > h1:
+      color: '#00FF8D'
+      font-size: 60px
+      line-height: 79px
+      margin-top: 5%
 ---
 <!DOCTYPE html>
 <html lang="en-us">
@@ -55,13 +65,88 @@ foodweb :
     <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
     <script>
       $(document).ready(function() {
-
+function toArray(arr) {
+        return Array.prototype.slice.call(arr);
+        }
+    
+        var svg = document.querySelector('.full-sketch-container svg');
+        svg.parentNode.style.display = 'block';
+        svg.style.visibility = 'hidden';
+    
+        function fullSketch() {
+          svg.style.visibility = '';
+          var paths = toArray(svg.querySelectorAll('path'));
+          var begin = 0;
+    
+          var durations = paths.map(function(path) {
+          var length = path.getTotalLength();
+    
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = length;
+          return Math.pow(length, 0.1);
+    
+        });
+    
+        // triggering a reflow so styles are calculated in their
+        // start position, so they animate from here
+        paths[0].getBoundingClientRect();
+    
+        paths.forEach(function(path, i) {
+          path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + durations[i] + 's ' + begin + 's ease-in-out';
+          path.style.strokeDashoffset = '0';
+          begin += durations[i] - 0.1;
+          });
+        }
         $(document).click(function() {
-
+          $('.go-text').delay(0).fadeOut(500);
+          setTimeout(fullSketch, 100);
         });
       })
     </script>
-
+    <style>
+      .web-images {
+        -webkit-animation: 2s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
+        .go-text {
+            opacity: 1;
+            -webkit-animation: blink 1.5s infinite;
+            -moz-animation: blink 1.5s infinite;
+            -ms-animation: blink 1.5s infinite;
+            -o-animation: blink 1.5s infinite;
+            animation: blink 1.5s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
   </head>
   <body>
 
@@ -119,7 +204,11 @@ foodweb :
       </div>
     </nav>
 
-    <div class="full-sketch-container" style="display: block;position: absolute;">
+    <div class="go-text">
+      <h1>Click to Start</h1>
+    </div>
+
+    <div class="full-sketch-container" style="display: none;position: absolute;">
       <svg viewBox="0 0 1000 660" height="660" width="1000" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker refY="2" refX="3" markerHeight="10" markerWidth="10" orient="auto" id="head">
