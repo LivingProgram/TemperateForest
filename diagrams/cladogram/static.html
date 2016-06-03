@@ -104,7 +104,17 @@ cladogram :
 
       })
     </script>
-
+    <style>
+      .cladogram-images {
+        -webkit-animation: 2s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
+    </style>
   </head>
   <body>
 
