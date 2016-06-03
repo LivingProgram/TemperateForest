@@ -7,36 +7,6 @@ cladogram :
       top: 65px
       width: 94px
       height: 88px
-      display: none
-    .img-sqr :
-      background-color: '#00FF8D'
-      width: 47px
-      height: 44px
-      position: absolute
-      left: 627px
-      top: 271px
-      opacity: 0
-    .go-sqr:
-      background-color: '#000000'
-      width: 94px
-      height: 88px
-      position: absolute
-      left: 627px
-      top: 271px
-      text-align: center
-    .go-text :
-      position: absolute
-      top: 271px
-      left: 505px
-    .go-text > h1:
-      color: '#00FF8D'
-      font-size: 60px
-      line-height: 79px
-      margin-top: 5%
-    .go-border :
-      position: absolute
-      top: 0
-      left: 0
     .navigation > a :
       color: '#FFFFFF'
       float: left
@@ -83,17 +53,6 @@ cladogram :
     <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
     <script>
       $(document).ready(function() {
-
-        $(document).click(function() {
-          $('#red-panda-img').delay(0).show(100);
-          $('#grizzly-bear-img').delay(0).show(100);
-          $('#wild-turkey-img').delay(0).show(100);
-          $('#north-american-porcupine-img').delay(0).show(100);
-          $('#mallard-img').delay(0).show(100);
-          $('#barred-owl-img').delay(0).show(100);
-          $('#peacock-img').delay(0).show(100); 
-          
-          
           $("#egg").typed({
             stringsElement: $('#egg-strings'),
             typeSpeed: 50,
@@ -101,7 +60,6 @@ cladogram :
             contentType: 'html',
             loopCount: false,
             showCursor: false,
-
           });
           $("#talons").typed({
             stringsElement: $('#talons-strings'),
@@ -110,7 +68,6 @@ cladogram :
             contentType: 'html',
             loopCount: false,
             showCursor: false,
-
           });
           $("#eyes").typed({
             stringsElement: $('#eyes-strings'),
@@ -119,7 +76,6 @@ cladogram :
             contentType: 'html',
             loopCount: false,
             showCursor: false,
-
           });
           $("#claws").typed({
             stringsElement: $('#claws-strings'),
@@ -128,7 +84,6 @@ cladogram :
             contentType: 'html',
             loopCount: false,
             showCursor: false,
-
           });
           $("#quills").typed({
             stringsElement: $('#quills-strings'),
@@ -137,7 +92,6 @@ cladogram :
             contentType: 'html',
             loopCount: false,
             showCursor: false,
-
           });
           $("#wattle").typed({
             stringsElement: $('#wattle-strings'),
@@ -147,9 +101,7 @@ cladogram :
             loopCount: false,
             showCursor: false,
           });
-          
-          $('.label').delay(0).show(1000);
-        });
+
       })
     </script>
 
