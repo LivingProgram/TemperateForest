@@ -1,0 +1,186 @@
+---
+title : TemperateForest FoodWeb
+foodweb :
+  css :
+    .navigation > a :
+      color: '#FFFFFF'
+      float: left
+      font-size: 20px
+      padding-left: 50px
+      padding-top: 20px
+      padding-right: 50px
+    .navigation > h1 :
+      color: '#FFFFFF'
+      float: left
+      padding-left: 64px
+    .web-images :
+      position: absolute
+      width: 90px
+      height: 90px
+    .featured-images:hover :
+      border: '8px solid #FFFFFF'
+    .label :
+      position: absolute
+      color: '#00FF8D'
+      font-size: 15px
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include resources.html %}
+    <style>
+      {% include green_nav.css %}
+      {% for selector in page.foodweb.css %}
+        {{ selector[0] }} {		
+          {% for css in selector[1] %}		
+            {{ css[0] }} : {{ css[1] }}; 		
+          {% endfor %}		
+        }
+      {% endfor %}
+    </style>
+    <script>
+      $(document).ready(function(){       
+        var scroll_start = 0;
+        $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > 10) {
+            $(".navbar-default").css('background-color', 'rgb(51, 51, 51)');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+      });
+    </script>
+    <script src="http://livingprogram.github.io/TemperateForest/typed.js-master/js/typed.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+
+        });
+      })
+    </script>
+    <style>
+      .web-images {
+        -webkit-animation: 2s 1s infinite wobble;
+      }
+      @-webkit-keyframes wobble {
+        0% { -webkit-transform: rotate(0deg); }
+        33% { -webkit-transform: rotate(5deg); }
+        67% { -webkit-transform: rotate(-5deg); }
+        100% { -webkit-transform: rotate(0deg); }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+      <div class="navigation">
+        <a href="http://livingprogram.github.io/TemperateForest/diagrams/main_menu/">&lt;- Main Menu</a>
+        <a id="Again" href="http://livingprogram.github.io/TemperateForest/diagrams/food_web/" style="display:none;">Again!!</a>
+        <h1>Food Web</h1>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="https://livingprogram.github.io/TemperateForest/" class="special-hover">Home</a></li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/animals" class="dropdown-toggle special-hover">Animals <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/animals">Main Menu</a></li>
+                      <li><a href="/TemperateForest/animals/red_panda">Red Panda</a></li>
+                      <li><a href="/TemperateForest/animals/grizzly_bear">Grizzly Bear</a></li>
+                      <li><a href="/TemperateForest/animals/wild_turkey">Wild Turkey</a></li>
+                      <li><a href="/TemperateForest/animals/north_american_porcupine">North American Porcupine</a></li>
+                      <li><a href="/TemperateForest/animals/mallard">Mallard</a></li>
+                      <li><a href="/TemperateForest/animals/barred_owl">Barred Owl</a></li>
+                      <li><a href="/TemperateForest/animals/indian_peafowl">Indian Peafowl</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="">
+              <ul class="nav nav-pills">
+                <li class="dropdown">
+                  <a href="/TemperateForest/diagrams" class="dropdown-toggle special-hover">Diagrams <b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="menu1">
+                      <li><a href="/TemperateForest/diagrams">Introduction</a></li>
+                      <li><a href="/TemperateForest/diagrams/main_menu">Main Menu</a></li>
+                      <li><a href="/TemperateForest/diagrams/cladogram">Cladogram</a></li>
+                      <li><a href="/TemperateForest/diagrams/food_web">Food Web</a></li>
+                      <li><a href="/TemperateForest/diagrams/trophic_level">Trophic Level</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+            <li class=""><a href="/TemperateForest/vocabulary" class="special-hover">Vocabulary</a></li>
+            <li class=""><a href="/TemperateForest/contact" class="special-hover">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="go-text">
+      <h1>Click to Start</h1>
+    </div>
+
+    <div class="full-sketch-container" style="display: block; position: absolute;">
+      <svg viewBox="0 0 1000 660" height="660" width="1000" xmlns="http://www.w3.org/2000/svg" style="visibility: hidden;">
+        <defs>
+          <marker refY="2" refX="3" markerHeight="10" markerWidth="10" orient="auto" id="head">
+            <!-- triangle pointing right (+x) -->
+            <path fill="#00FF8D" d="M0,0 L0,4 L4,2 z"></path>
+          </marker>
+        </defs> 
+        <path d="M 200 570 C 240 570, 240 150, 170 160" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 200 570 L 137 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 200 570 L 313 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 400 570 L 470 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 400 570 L 670 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 770 570 L 313 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 200 570 L 850 490" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 137 400 L 150 320" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 290 400 L 170 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 445 400 L 170 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M 445 400 L 470 320" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path stroke-width="5" stroke="#00FF8D" marker-end="url(#head)" d="M 445 400 L 840 320"></path><path stroke-width="5" stroke="#00FF8D" marker-end="url(#head)" d="M 670 400 L 620 320"></path><path d="M  620 230 L 420 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M  470 230 L 620 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path><path d="M  840 230 L 840 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path>
+        <path d="M 50 570 C 0 600, 0 300, 170 150" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path>
+        <path d="M 870 400 C 900 400, 900 150, 850 160" marker-end="url(#head)" stroke="#00FF8D" stroke-width="5"></path></svg>
+      
+    </div>
+
+    <div class="web-images" id="img1" style="left: 3px;top: 570px;background-image: url(&quot;/TemperateForest/images/animals/food_web/apple_tree.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div><div class="web-images" id="img4" style="left: 172px;top: 570px;background-image: url(&quot;/TemperateForest/images/animals/food_web/blue_berry_bushes.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    <div class="web-images" id="img3" style="left: 346px;top: 570px;background-image: url(&quot;/TemperateForest/images/animals/food_web/bermuda_grass.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    <div class="web-images" id="img6" style="left: 721px;top: 570px;background-image: url(&quot;/TemperateForest/images/animals/food_web/deciduous_tree.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    
+    <a href="/TemperateForest/animals/red_panda"><div class="web-images featured-images" id="red-panda-img" style="left: 100px;background-image: url(&quot;/TemperateForest/images/animals/red_panda.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 400px;"></div></a>
+    <a href="/TemperateForest/animals/north_american_porcupine"><div class="web-images featured-images" id="north-american-porcupine-img" style="left: 252px;background-image: url(&quot;/TemperateForest/images/animals/north_american_porcupine.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 400px;"></div></a>
+    <div class="web-images" id="img2" style="left: 396px;top: 400px;background-image: url(&quot;/TemperateForest/images/animals/food_web/beetle.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div><div class="web-images" id="img8" style="left: 615px;top: 400px;background-image: url(&quot;/TemperateForest/images/animals/food_web/mice.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    
+    <a href="/TemperateForest/animals/wild_turkey"><div class="web-images featured-images" id="wild-turkey-img" style="left: 820px;background-image: url(&quot;/TemperateForest/images/animals/wild_turkey.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 400px;"></div></a>
+    <div class="web-images" id="img10" style="left: 112px;top: 230px;background-image: url(&quot;/TemperateForest/images/animals/food_web/weasel.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    <a href="/TemperateForest/animals/barred_owl"><div class="web-images featured-images" id="barred-owl-img" style="left: 564px;background-image: url(&quot;/TemperateForest/images/animals/barred_owl.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 230px;"></div></a>
+    <a href="/TemperateForest/animals/indian_peafowl"><div class="web-images featured-images" id="peacock-img" style="left: 417px;background-image: url(&quot;/TemperateForest/images/animals/peacock.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 230px;"></div></a>
+    <a href="/TemperateForest/animals/mallard"><div class="web-images featured-images" id="mallard-img" style="left: 782px;background-image: url(&quot;/TemperateForest/images/animals/mallard.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 230px;"></div></a>
+    <a href="/TemperateForest/animals/grizzly_bear"><div class="web-images featured-images" id="grizzly-bear-img" style="left: 128px;background-image: url(&quot;/TemperateForest/images/animals/grizzly_bear.jpg&quot;);background-size: cover;background-repeat: no-repeat;top: 60px;"></div></a>
+    <div class="web-images" id="img7" style="left: 346px;top: 60px;background-image: url(&quot;/TemperateForest/images/animals/food_web/great_horned_owl.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    <div class="web-images" id="img9" style="left: 564px;top: 60px;background-image: url(&quot;/TemperateForest/images/animals/food_web/mongoose.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+    <div class="web-images" id="img5" style="left: 782px;top: 60px;background-image: url(&quot;/TemperateForest/images/animals/food_web/crow.jpg&quot;);background-size: cover;background-repeat: no-repeat;"></div>
+ 
+  <p class="label" style="left: 22px;top: 89px;">Grizzly Bear</p>
+<p class="label" style="left: 278px;top: 89px;">Great<br>Horned<br>Owl</p>
+<p class="label" style="left: 479px;top: 89px;">Mongoose</p>
+<p class="label" style="left: 722px;top: 89px;">Crow</p>
+<p class="label" style="left: 74px;top: 324px;">Weasel</p>
+<p class="label" style="left: 340px;top: 256px;">Indian<br>Peafowl</p>
+<p class="label" style="left: 655px;top: 263px;">Barred<br>Owl</p>
+<p class="label" style="left: 719px;top: 263px;">Mallard</p>
+<p class="label" style="left: 41px;top: 435px;">Red<br>Panda</p>
+<p class="label" style="left: 294px;top: 351px;">North<br>American<br> Porcupine</p>
+<p class="label" style="left: 482px;top: 418px;">Beetle</p>
+<p class="label" style="left: 552px;top: 446px;">Mouse</p>
+<p class="label" style="left: 761px;top: 418px;">Wild<br>Turkey</p>
+<p class="label" style="left: 87px;top: 590px;">Apple<br>Tree</p>
+<p class="label" style="left: 260px;top: 590px;">Blue<br>Berry<br>Bush</p>
+<p class="label" style="left: 441px;top: 590px;">Bermuda<br>Grass</p>
+<p class="label" style="left: 641px;top: 590px;">Oak Tree</p>
+  </body>
+</html>
+
